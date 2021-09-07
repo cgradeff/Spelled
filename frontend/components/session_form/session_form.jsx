@@ -45,6 +45,8 @@ class SessionForm extends React.Component {
         <form onSubmit={this.handleSubmit} className="login-form-box">
           <br/>
           {this.props.formType}
+          {this.props.formType == 'Log in' ? <p>Log in to your Spelled account to buy, sell, comment, and more.</p> 
+            : <p>By creating an account on Spelled you'll be able to buy, sell, comment, and more.</p>}
           {this.renderErrors()}
           <div className="login-form">
             <br/>

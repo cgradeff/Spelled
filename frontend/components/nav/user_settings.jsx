@@ -10,7 +10,7 @@ class UserSettings extends React.Component {
     onClick(e) {
         e.preventDefault();
         this.props.logout();
-        this.props.history.push('/');
+        // this.props.history.push('/');
     }
 
     render() {
