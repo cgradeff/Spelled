@@ -8,6 +8,7 @@ class SessionForm extends React.Component {
       password: ''
     }
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleDemoUser = this.handleDemoUser.bind(this);
   }
 
   update(field) {
@@ -20,6 +21,10 @@ class SessionForm extends React.Component {
     e.preventDefault();
     const user = Object.assign({}, this.state);
     this.props.processForm(user);
+  }
+
+  handleDemoUser(e) {
+    this.setState({email: 'Demo@gmail.com', password: 'ILoveMagic!'})
   }
 
   renderErrors() {
@@ -61,7 +66,9 @@ class SessionForm extends React.Component {
             <br/>
             <input className="session-submit" type="submit" value={this.props.formType} />
           </div>
-          have an account? {this.props.navLink}
+          {this.props.formType == 'Log in' ? <button className='session-submit' onClick={this.handleDemoUser}>Demo User</button> : null}
+          {this.props.formType == 'Create an Account' ? <p className='modal-bottom-text'>Already have an account? <span>{this.props.otherForm}</span></p>
+            : <p className='modal-bottom-text'>Don't have an account? <span>{this.props.otherForm}</span></p> }
         </form>
       </div>
     )
