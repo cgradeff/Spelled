@@ -1,6 +1,7 @@
-import React from 'react'
-import UserSettings from './user_settings_container'
-import {Link} from 'react-router-dom'
+import React from 'react';
+import UserSettings from './user_settings_container';
+import {Link} from 'react-router-dom';
+// import logo from '../../../images/logo.png';
 
 class NavHeader extends React.Component {
     constructor(props) {

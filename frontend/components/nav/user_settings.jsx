@@ -19,7 +19,7 @@ class UserSettings extends React.Component {
             return (
                 <div>
                     <div className='user-settings-options'>
-                        <button className='user-settings-button' onClick={this.onClick}>Logout</button>
+                        <button className='user-settings-button' onClick={this.onClick}>LOGOUT</button>
                     </div>
                 </div>
             )

@@ -1,0 +1,32 @@
+.footer {
+  //   display: flex;
+  background-color: transparent;
+  align-items: flex-end;
+  //   justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+//   height: 70px;
+  border-top: 1px solid;
+  border-color: rgb(221, 221, 221);
+  color: black;
+}
+
+.foot-links {
+  display: flex;
+  width: 200px;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 30px;
+  font-size: 12px;
+  height: 70px;
+  font-weight: 450;
+}
+
+.foot-icons {
+    color: black;
+    align-items: center;
+    padding-right: 30px;
+    // height: 20px;
+}
+

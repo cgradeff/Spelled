@@ -3,7 +3,7 @@
     display: flex;
     width: 100%;
     align-items: center;
-    position: sticky;
+    position: fixed;
     justify-content: space-between;
     background-color: white;
     border-bottom: 1px solid;
@@ -15,6 +15,8 @@
   color: black;
   text-decoration: none;
   padding-left: 30px;
+  font-weight: light;
+//   height: 30px;
 }
 
 .user-settings-options {
