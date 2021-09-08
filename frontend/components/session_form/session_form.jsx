@@ -28,51 +28,50 @@ class SessionForm extends React.Component {
   }
 
   renderErrors() {
-    return(
-      <ul>
-        {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>
-            {error}
-          </li>
-        ))}
-      </ul>
+    return (
+      <p></p>
     )
   }
 
   render() {
     return (
-      <div className="login-form-container">
-        <form onSubmit={this.handleSubmit} className="login-form-box">
+      <div className="session-form-container">
+        <form onSubmit={this.handleSubmit} className="session-form-box">
           <br/>
-          {this.props.formType}
-          {this.props.formType == 'Log in' ? <p>Log in to your Spelled account to buy, sell, comment, and more.</p> 
-            : <p>By creating an account on Spelled you'll be able to buy, sell, comment, and more.</p>}
-          {this.renderErrors()}
-          <div className="login-form">
-            <br/>
-            <label>Email:
+          <h3 className="form-type">{this.props.formType}</h3>
+          {((this.props.formType == 'Log in') && (this.props.errors.length != 0)) ? <p className='inval-errors'>{this.props.errors[0]}</p> : null}
+          <div className="session-form">
+            <label>Email Address
+              <br />
               <input type="text"
                 value={this.state.email}
                 onChange={this.update('email')}
-                className="login-input"
+                className="session-input"
               />
             </label>
+            {this.props.formType == 'Log in' ? <p className='auth-errors'>{this.props.errors[1]}</p> 
+              : <p className='auth-errors'>{this.props.errors[0]}</p>}
             <br/>
-            <label>Password:
+            <label>Password
+              <br />
               <input type="password"
                 value={this.state.password}
                 onChange={this.update('password')}
-                className="login-input"
+                className="session-input"
               />
             </label>
+            {this.props.formType == 'Log in' ? <p className='auth-errors'>{this.props.errors[1]}</p> 
+              : <p className='auth-errors'>{this.props.errors[1]}</p>}
             <br/>
             <input className="session-submit" type="submit" value={this.props.formType} />
           </div>
+          <br />
           {this.props.formType == 'Log in' ? <button className='session-submit' onClick={this.handleDemoUser}>Demo User</button> : null}
+          <br />
           {this.props.formType == 'Create an Account' ? <p className='modal-bottom-text'>Already have an account? <span>{this.props.otherForm}</span></p>
             : <p className='modal-bottom-text'>Don't have an account? <span>{this.props.otherForm}</span></p> }
         </form>
-      </div>
+      </div> 
     )
   }
 }

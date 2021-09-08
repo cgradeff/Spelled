@@ -1,0 +1,23 @@
+.inval-errors {
+  font-weight: normal;
+  font-size: 14px;
+  color: rgb(206, 14, 14);
+  border-style: solid;
+  list-style-type: none;
+  border-radius: 5px;
+  border-color: rgb(206, 14, 14);
+  border-width: 1px;
+  width: 286px;
+  // height: 40px;
+  // padding: ;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+  background-color: rgb(255, 248, 248);
+}
+
+.auth-errors {
+  color: rgb(206, 14, 14);
+  font-size: 12px;
+  font-weight: 450;
+}

@@ -29,8 +29,8 @@ class UserSettings extends React.Component {
             return (
                 <div>
                     <div className='user-settings-options'>
-                        <button className='user-settings-button' onClick={() => this.props.openModal('login')}>LOGIN</button>
-                        <button className='user-settings-button' onClick={() => this.props.openModal('signup')}>SIGN UP</button>
+                        <button className='user-settings-button' id='login' onClick={() => this.props.openModal('login')}>LOGIN</button>
+                        <button className='user-settings-button' id='signup' onClick={() => this.props.openModal('signup')}>SIGN UP</button>
                     </div>
                 </div>
             )

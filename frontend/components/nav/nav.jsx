@@ -17,9 +17,9 @@ class NavHeader extends React.Component {
     render() {
         return(
             <div className='nav-header'>
-                <Link to='/'>
-                    <div onClick={this.handleClick} className='title'>
-                        <h1 className='title'>Spelled</h1>
+                <Link to='/' className='title'>
+                    <div onClick={this.handleClick} >
+                        <h1 className='title'>SPELLED</h1>
                     </div>
                 </Link>
                 <UserSettings />

@@ -1,0 +1,80 @@
+// session forms auth
+.session-form-container {
+  width: 395px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  border-radius: 2%;
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  color: black;
+  background-color: #FFFFFF;
+  letter-spacing: normal;
+}
+
+.session-form-box {
+  padding-left: 10%;
+  font-size: 16px;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-type {
+  font-size: 34px;
+  font-weight: 650;
+}
+
+label {
+  font-weight: 550;
+}
+
+.session-form-container button,
+.session-form-container input[type='submit'] {
+  width: 318px;
+  border-radius: 5px;
+  border-style: none;
+  height: 50px;
+  background-color: rgb(0, 0, 0);
+  font-weight: 500;
+  color: #FFFFFF;
+}
+
+.session-form-container input[type='text'],
+.session-form-container input[type='password'] {
+  width: 310px;
+  height: 40px;
+  border-radius: 5px;
+  border-color: rgb(221, 221, 221);
+  border-style: solid;
+  border-width: 1px;
+  text-align: justify;
+}
+
+.modal-background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 10;
+}
+
+.session-form-container button:hover,
+.session-form-container input[type='submit']:hover {
+  background-color: #2e2e2e;
+}
+
+.modal-bottom-button {
+  background-color: white;
+  border-color: transparent;
+}
+
+.modal-bottom-text {
+  font-size: 15px;
+  font-weight: 300;
+}
