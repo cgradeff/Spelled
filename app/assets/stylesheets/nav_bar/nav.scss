@@ -8,15 +8,22 @@
     background-color: white;
     border-bottom: 1px solid;
     border-color: rgb(221, 221, 221);
+    height: 75px;
     
 }
 
-.title {
+.title-cont {
   color: black;
   text-decoration: none;
-  padding-left: 30px;
+//   align-content: center;
+  padding-left: 55px;
   font-weight: light;
 //   height: 30px;
+//   height: 30px;
+}
+
+.title {
+    height: 27px;
 }
 
 .user-settings-options {

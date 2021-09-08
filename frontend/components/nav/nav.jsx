@@ -18,11 +18,12 @@ class NavHeader extends React.Component {
     render() {
         return(
             <div className='nav-header'>
-                <Link to='/' className='title'>
+                <Link to='/' className='title-cont'>
                     <div onClick={this.handleClick} >
-                        <h1 className='title'>SPELLED</h1>
+                        <img className="title" src={window.logoUrl} alt="SPELLED" />
                     </div>
                 </Link>
+                
                 <UserSettings />
             </div>
 
