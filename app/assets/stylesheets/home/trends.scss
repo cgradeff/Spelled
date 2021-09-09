@@ -1,0 +1,52 @@
+.trends {
+    margin-top: 50px;
+    margin-bottom: 100px;
+    color: black;
+    height: max-content;
+    font-size: 20px;
+    font-weight: 450;
+    letter-spacing: normal;
+}
+
+.late-trends {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.late-img {
+    padding-left: 8px;
+    padding-right: 8px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 550;
+}
+
+.late-img img {
+    width: 390px;
+}
+
+.trend-titles {
+    margin-left: 60px;
+}
+
+.type-trends {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    color: black;
+}
+
+.type-box img {
+    width: 160px;
+}
+
+.type-box {
+    padding-left: 8px;
+    padding-right: 8px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 550;
+}

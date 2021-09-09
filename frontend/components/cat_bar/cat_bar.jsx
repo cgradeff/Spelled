@@ -11,7 +11,7 @@ class CatBar extends React.Component {
         return (
             <div className='cat-bar'>
                 <Dropdown>
-                    <Dropdown.Toggle variant="success" id="dropdown-types" autoClose={true} >TYPES</Dropdown.Toggle>
+                    <Dropdown.Toggle variant="success" id="dropdown-types" >TYPES</Dropdown.Toggle>
                     <Dropdown.Menu className='menu'>
                         <Dropdown.Item className='menu-item' href="#/action-1">LANDS</Dropdown.Item>
                         <br />

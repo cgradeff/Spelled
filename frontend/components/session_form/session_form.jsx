@@ -1,4 +1,5 @@
 import React from 'react';
+import { logout } from '../../util/session_api_util';
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -77,3 +78,4 @@ class SessionForm extends React.Component {
 }
 
 export default SessionForm;
+

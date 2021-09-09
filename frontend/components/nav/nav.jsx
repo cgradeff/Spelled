@@ -23,8 +23,14 @@ class NavHeader extends React.Component {
                         <img className="title" src={window.logoUrl} alt="SPELLED" />
                     </div>
                 </Link>
+                <div className='nav-right'>
+                    <div className='nav-links'>
+                        <p>SHOP</p>
+                        <p>SELL</p>
+                    </div>
+                    <UserSettings />
+                </div>
                 
-                <UserSettings />
             </div>
 
         )

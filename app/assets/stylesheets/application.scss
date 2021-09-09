@@ -18,6 +18,8 @@
 @import './auth/sessions';
 @import './auth/session_errors';
 @import './cat_bar/cat_bar';
+@import './home/slider';
+@import './home/trends';
 @import './splash/footer';
 
 // basics
@@ -30,6 +32,11 @@ body {
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: light;
   letter-spacing: 1px;
+}
+
+.body {
+  position: relative;
+  top: 75px;
 }
 
 
