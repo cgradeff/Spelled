@@ -32,6 +32,7 @@
   align-items: center;
 }
 
+
 .title {
     height: 27px;
 }
@@ -103,6 +104,10 @@
     display: flex;
     align-items: center;
     margin-left: 35px;
+}
+
+.search-input:focus {
+    outline: none;
 }
 
 .search-input {
