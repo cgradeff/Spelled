@@ -20,8 +20,13 @@ class Home extends React.Component {
             <div className='home'>
                 <Slider />
                 <Trends />
-                <div >
-
+                <div className='home-footer'>
+                    <div className='text'>
+                        <p>The one-stop destination for buying,</p>
+                        <p>selling and exporing Magic cards.</p>
+                    </div>
+                    
+                    <button>SHOP THE FEED</button>
                 </div>
             </div>
         )

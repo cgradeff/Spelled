@@ -1,0 +1,32 @@
+.home-footer {
+    // display: flex;
+    color: white;
+    background-image: image_url("home_footer.png");
+    background-size: cover;
+    font-size: 44px;
+    letter-spacing: normal;
+    text-align: center;
+    align-items: center;
+    height: 470px;
+}
+
+.home-footer button {
+    font-size: 14px;
+    height: 60px;
+    width: 190px;
+    border: none;
+    border-radius: 2px;
+    background-color: white;
+    color: black;
+}
+
+.home-footer .text {
+    padding-top: 65px;
+    line-height: 12px;
+    font-weight: 450;
+}
+
+.home-footer button:hover {
+    background-color: rgb(206, 206, 206);
+    color: rgb(31, 31, 31);
+}
