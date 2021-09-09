@@ -1,4 +1,4 @@
-
+// main nav bar
 .nav-header {
     display: flex;
     width: 100%;
@@ -13,6 +13,7 @@
     
 }
 
+// right of search bar
 .nav-right {
     display: flex;
     align-items: center;
@@ -21,18 +22,21 @@
     padding-right: 35px;
 }
 
+// title/logo + search bar
 .title-cont {
   color: black;
   text-decoration: none;
-  padding-left: 55px;
+  padding-left: 35px;
   font-weight: light;
-
+  display: inline-flex;
+  align-items: center;
 }
 
 .title {
     height: 27px;
 }
 
+// user settings
 .user-settings-options {
     display: flex;
     padding-right: 30px;
@@ -75,6 +79,7 @@
     border-color: black;
 }
 
+// sell and shop links
 .nav-links {
     color: black;
     font-size: 12px;
@@ -88,4 +93,45 @@
 
 .nav-links p:hover {
     color: blue;
+}
+
+// search bar
+
+.search-bar {
+    // width: 300px;
+    // background-color: burlywood;
+    border: 1px solid black;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    margin-left: 35px;
+}
+
+.search-input {
+    width: 500px;
+    height: 38px;
+    border: none;
+    font-size: 14px;
+    font-weight: 300;
+    color: rgb(221, 221, 221);
+}
+
+.search-icon {
+    height: 35px;
+    width: 40px;
+    font-size: 16px;
+    font-weight: lighter;
+    border: none;
+    background-color: transparent;
+}
+
+.search-button {
+    height: 33px;
+    width: 80px;
+    border: 1px solid rgb(221, 221, 221);
+    background-color: transparent;
+    margin-right: 5px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 550;
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import UserSettings from './user_settings_container';
+import SearchBar from './search_bar';
 import {Link} from 'react-router-dom';
-// import logo from '../../../images/logo.png';
 
 class NavHeader extends React.Component {
     constructor(props) {
@@ -18,11 +18,15 @@ class NavHeader extends React.Component {
     render() {
         return(
             <div className='nav-header'>
-                <Link to='/' className='title-cont'>
-                    <div onClick={this.handleClick} >
-                        <img className="title" src={window.logoUrl} alt="SPELLED" />
-                    </div>
-                </Link>
+                <div className='title-cont'>
+                    <Link to='/' >
+                        <div onClick={this.handleClick} >
+                            <img className="title" src={window.logoUrl} alt="SPELLED" />
+                        </div>
+                    </Link>
+                    <SearchBar />
+                </div>
+                
                 <div className='nav-right'>
                     <div className='nav-links'>
                         <p>SHOP</p>

@@ -7,10 +7,10 @@ import CatBar from './cat_bar/cat_bar';
 import Home from './home/home';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
-import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { faChevronLeft, faChevronRight, faSearch } from '@fortawesome/free-solid-svg-icons';
 
 
-library.add(fab, faChevronRight, faChevronLeft);
+library.add(fab, faChevronRight, faChevronLeft, faSearch);
 
 const App = () => (
   <div>
