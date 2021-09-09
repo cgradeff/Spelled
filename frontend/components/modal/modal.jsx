@@ -2,7 +2,6 @@ import React from 'react';
 import LoginFormContainer from '../session_form/login_form_container';
 import SignupFormContainer from '../session_form/signup_form_container';
 
-
 class Modal extends React.Component {
     constructor(props) {
         super(props)
@@ -14,7 +13,6 @@ class Modal extends React.Component {
     }
 
     render() {
-        
         if (!this.props.modal) {
             return null
         };
@@ -32,7 +30,6 @@ class Modal extends React.Component {
         }
         
         return (
-            
             <div className='modal-background' onClick={this.props.closeModal}>
                 <div className='modal-child' onClick={this.stopProp}>{component}</div>
             </div>
