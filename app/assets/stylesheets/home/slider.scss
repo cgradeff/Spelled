@@ -1,0 +1,58 @@
+.slider {
+    display: flex;
+    width: 100%;
+    position: relative;
+    top: 20px;
+    z-index: 0;
+    align-items: center;
+    justify-content: space-around;
+    color: black;
+}
+
+.slider-content {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slider-img {
+    height: 480px;
+}
+
+.slider-title {
+    font-weight: 500;
+    font-size: 32px;
+}
+
+.slider-text button {
+    background-color: transparent;
+    border-radius: 25px;
+    border: 1px solid black;
+    height: 50px;
+    width: 170px;
+    font-size: 16px;
+    font-weight: 450;
+}
+
+.slider-text button:hover {
+    background-color: black;
+    color: white;
+    border-color: black;
+}
+
+.slider-text {
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-p {
+    font-size: 12px;
+    font-weight: 450;
+    letter-spacing: normal;
+}
+// uhhhh fix this
+
+.switch {
+    color: black;
+}

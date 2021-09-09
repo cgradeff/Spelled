@@ -1,4 +1,5 @@
 class Api::UsersController < ApplicationController
+    
     def show 
         @user = User.find_by(email: params[:email])
         render :show
@@ -11,7 +12,7 @@ class Api::UsersController < ApplicationController
             login(@user)
             render :show
         else
-            render json: @user.errors.full_messages, status: 422
+            render json: ['Error: Required', 'Error: Password must be at least 8 characters long.'], status: 422
         end
     end
 
@@ -22,6 +23,6 @@ class Api::UsersController < ApplicationController
     private 
     
     def user_params
-        params.require(:user).permit(:email, :password)
+        params.require(:user).permit(:email, :password, :username)
     end
 end

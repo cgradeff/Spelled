@@ -1,0 +1,81 @@
+import React from 'react';
+import { logout } from '../../util/session_api_util';
+
+class SessionForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      email: '',
+      password: ''
+    }
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleDemoUser = this.handleDemoUser.bind(this);
+  }
+
+  update(field) {
+    return e => this.setState({
+      [field]: e.currentTarget.value
+    })
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    const user = Object.assign({}, this.state);
+    this.props.processForm(user);
+  }
+
+  handleDemoUser(e) {
+    this.setState({email: 'Demo@gmail.com', password: 'ILoveMagic!'})
+  }
+
+  renderErrors() {
+    return (
+      <p></p>
+    )
+  }
+
+  render() {
+    return (
+      <div className="session-form-container">
+        <form onSubmit={this.handleSubmit} className="session-form-box">
+          <br/>
+          <h3 className="form-type">{this.props.formType}</h3>
+          {((this.props.formType == 'Log in') && (this.props.errors.length != 0)) ? <p className='inval-errors'>{this.props.errors[0]}</p> : null}
+          <div className="session-form">
+            <label>Email Address
+              <br />
+              <input type="text"
+                value={this.state.email}
+                onChange={this.update('email')}
+                className="session-input"
+              />
+            </label>
+            {this.props.formType == 'Log in' ? <p className='auth-errors'>{this.props.errors[1]}</p> 
+              : <p className='auth-errors'>{this.props.errors[0]}</p>}
+            <br/>
+            <label>Password
+              <br />
+              <input type="password"
+                value={this.state.password}
+                onChange={this.update('password')}
+                className="session-input"
+              />
+            </label>
+            {this.props.formType == 'Log in' ? <p className='auth-errors'>{this.props.errors[1]}</p> 
+              : <p className='auth-errors'>{this.props.errors[1]}</p>}
+            <br/>
+            <input className="session-submit" type="submit" value={this.props.formType} />
+          </div>
+          <br />
+          {this.props.formType == 'Log in' ? <button className='session-submit' onClick={this.handleDemoUser}>Demo User</button> : null}
+          <br />
+          {this.props.formType == 'Create an Account' ? <p className='modal-bottom-text'>Already have an account? <span>{this.props.otherForm}</span></p>
+            : <p className='modal-bottom-text'>Don't have an account? <span>{this.props.otherForm}</span></p> }
+        </form>
+      </div> 
+    )
+  }
+}
+
+export default SessionForm;
+
