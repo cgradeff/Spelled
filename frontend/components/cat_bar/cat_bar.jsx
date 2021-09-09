@@ -1,18 +1,27 @@
 import React from 'react';
-import ClickDropdown from '../dropdown/dropdown';
 import Dropdown from 'react-bootstrap/Dropdown';
+
 
 class CatBar extends React.Component {
     constructor(props) {
         super(props)
+        this.state = { isOpen: false }
+    }
+
+    handleOpen = () => {
+        this.setState({ isOpen: true })
+    }
+
+    handleClose = () => {
+        this.setState({ isOpen: false })
     }
 
     render() {
         return (
             <div className='cat-bar'>
-                <Dropdown>
+                <Dropdown >
                     <Dropdown.Toggle variant="success" id="dropdown-types" >TYPES</Dropdown.Toggle>
-                    <Dropdown.Menu className='menu'>
+                    <Dropdown.Menu  className='menu'>
                         <Dropdown.Item className='menu-item' href="#/action-1">LANDS</Dropdown.Item>
                         <br />
                         <Dropdown.Item className='menu-item' href="#/action-2">CREATURES</Dropdown.Item>
