@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_09_143832) do
+ActiveRecord::Schema.define(version: 2021_09_10_194624) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,6 +43,58 @@ ActiveRecord::Schema.define(version: 2021_09_09_143832) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
+  create_table "colors", force: :cascade do |t|
+    t.string "color"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["color"], name: "index_colors_on_color"
+  end
+
+  create_table "joins", force: :cascade do |t|
+    t.bigint "listings_id", null: false
+    t.bigint "types_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["listings_id"], name: "index_joins_on_listings_id"
+    t.index ["types_id"], name: "index_joins_on_types_id"
+  end
+
+  create_table "joins_cs", force: :cascade do |t|
+    t.bigint "listings_id", null: false
+    t.bigint "colors_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["colors_id"], name: "index_joins_cs_on_colors_id"
+    t.index ["listings_id"], name: "index_joins_cs_on_listings_id"
+  end
+
+  create_table "listings", force: :cascade do |t|
+    t.integer "author_id", null: false
+    t.string "title", null: false
+    t.string "body", null: false
+    t.integer "price", null: false
+    t.boolean "offer", null: false
+    t.boolean "sold", null: false
+    t.string "condition", null: false
+    t.string "rarity", null: false
+    t.integer "mana", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["condition"], name: "index_listings_on_condition"
+    t.index ["mana"], name: "index_listings_on_mana"
+    t.index ["price"], name: "index_listings_on_price"
+    t.index ["rarity"], name: "index_listings_on_rarity"
+    t.index ["sold"], name: "index_listings_on_sold"
+    t.index ["title"], name: "index_listings_on_title"
+  end
+
+  create_table "types", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["name"], name: "index_types_on_name"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", null: false
     t.string "bio"
@@ -58,4 +110,8 @@ ActiveRecord::Schema.define(version: 2021_09_09_143832) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "joins", "listings", column: "listings_id"
+  add_foreign_key "joins", "types", column: "types_id"
+  add_foreign_key "joins_cs", "colors", column: "colors_id"
+  add_foreign_key "joins_cs", "listings", column: "listings_id"
 end
