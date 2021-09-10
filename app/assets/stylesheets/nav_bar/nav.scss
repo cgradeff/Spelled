@@ -101,9 +101,13 @@
 .search-bar {
     border: 1px solid black;
     border-radius: 2px;
+    margin-left: 35px;
+}
+
+.search-form {
     display: flex;
     align-items: center;
-    margin-left: 35px;
+    min-width: fit-content;
 }
 
 .search-input:focus {

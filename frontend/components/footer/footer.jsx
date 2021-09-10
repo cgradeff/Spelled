@@ -13,7 +13,13 @@ class Footer extends React.Component {
             <div className='footer'>
                 <div className='foot-links'>
                     <p>ABOUT</p> 
+                    <p>HELP & FAQ</p>
+                    <p>TERMS</p>
+                    <p>TRUST</p>
+                    <p>ACCESSIBILITY</p>
                     <p>CONTACT</p>
+                    <p>JOBS</p>
+                    <p>IOS APP</p>
                 </div>
                 <div className='foot-icons'>
                     <a className='icon' href={this.linkedInUrl} target='_blank'><FontAwesomeIcon icon={['fab', 'linkedin']} /></a>
