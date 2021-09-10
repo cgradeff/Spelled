@@ -12,15 +12,21 @@
   justify-content: center;
   align-self: center;
   color: black;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   letter-spacing: normal;
 }
 
 .session-form-box {
-  padding-left: 10%;
   font-size: 16px;
   justify-content: center;
   align-items: center;
+}
+
+.start-modal {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .form-type {
@@ -32,7 +38,7 @@ label {
   font-weight: 550;
 }
 
-.session-form-container button,
+.modal-child button,
 .session-form-container input[type='submit'] {
   width: 318px;
   border-radius: 5px;
@@ -40,7 +46,7 @@ label {
   height: 50px;
   background-color: rgb(0, 0, 0);
   font-weight: 500;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .session-form-container input[type='text'],
@@ -71,10 +77,27 @@ label {
 
 .modal-bottom-button {
   background-color: white;
-  border-color: transparent;
+  
 }
 
 .modal-bottom-text {
   font-size: 15px;
   font-weight: 300;
 }
+
+.bottom-text {
+  display: flex;
+}
+
+#switch {
+  background-color: transparent;
+  border: none;
+  color: black;
+  font-size: 15px;
+  font-weight: 300;
+  width: fit-content;
+  text-decoration: underline;
+  height: 48px;
+}
+
+
