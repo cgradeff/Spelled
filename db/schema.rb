@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_10_194624) do
+ActiveRecord::Schema.define(version: 2021_09_12_185129) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -73,18 +73,17 @@ ActiveRecord::Schema.define(version: 2021_09_10_194624) do
     t.string "title", null: false
     t.string "body", null: false
     t.integer "price", null: false
-    t.boolean "offer", null: false
-    t.boolean "sold", null: false
     t.string "condition", null: false
     t.string "rarity", null: false
     t.integer "mana", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "offer"
+    t.string "sold"
     t.index ["condition"], name: "index_listings_on_condition"
     t.index ["mana"], name: "index_listings_on_mana"
     t.index ["price"], name: "index_listings_on_price"
     t.index ["rarity"], name: "index_listings_on_rarity"
-    t.index ["sold"], name: "index_listings_on_sold"
     t.index ["title"], name: "index_listings_on_title"
   end
 

@@ -20,16 +20,16 @@ class NavHeader extends React.Component {
             <div className='nav-header'>
                 <div className='title-cont'>
                     <Link to='/' >
-                        <div onClick={this.handleClick} >
                             <img className="title" src={window.logoUrl} alt="SPELLED" />
-                        </div>
                     </Link>
                     <SearchBar />
                 </div>
                 
                 <div className='nav-right'>
                     <div className='nav-links'>
-                        <p>SHOP</p>
+                        <Link to='/listings' >
+                            <div>SHOP</div>
+                        </Link>
                         <p>SELL</p>
                     </div>
                     <UserSettings />

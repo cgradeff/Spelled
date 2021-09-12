@@ -8,8 +8,8 @@ class Api::ListingsController < ApplicationController
 
 
   def index
-    listings = Listing.all
-    render :index
+    @listings = Listing.all
+    # render "api/listings/index"
   end
 
   def show
@@ -41,7 +41,7 @@ class Api::ListingsController < ApplicationController
   end
 
   def listing_params
-    params.require(:listing).permit(:title, :body, :price, :offer, :sold, :condition, color_ids: [], :rarity, type_ids: [], :mana, :photo)
+    params.require(:listing).permit(:title, :body, :price, :offer, :sold, :condition, :rarity, :mana, :photo)
   end
 
 end

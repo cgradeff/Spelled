@@ -1,8 +1,7 @@
-export const fetchListings = data => (
+export const fetchListings = () => (
   $.ajax({
     method: 'GET',
     url: 'api/listings',
-    data
   })
 );
 
@@ -13,15 +12,12 @@ export const fetchListing = id => (
   })
 );
 
-export const 
 
-export const createListing = listingForm => (
+export const createListing = listing => (
   $.ajax({
     method: 'POST',
     url: 'api/listings',
-    data: listingForm,
-    contentType: false,
-    processData: false
+    data: { listing },
   })
 );
 

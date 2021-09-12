@@ -1,6 +1,7 @@
 class Listing < ApplicationRecord
-  validates :title, :body, :price, :offer, :sold, :condition, :color, :rarity, :types, :mana, presence: true
-  validates :offer, :sold, inclusion: { in: [true, false] }
+  validates :title, :body, :price, :offer, :sold, :condition, :rarity, :mana, presence: true
+  # validates :offer, :sold, presence: true
+  # inclusion: { in: [true, false] }
 
   belongs_to :author,
     class_name: :User

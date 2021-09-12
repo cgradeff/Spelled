@@ -5,6 +5,7 @@ import Nav from './nav/nav';
 import Footer from './footer/footer';
 import CatBar from './cat_bar/cat_bar';
 import Home from './home/home';
+import ShopContainer from './listings/shop_container';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { faChevronLeft, faChevronRight, faSearch } from '@fortawesome/free-solid-svg-icons';
@@ -23,7 +24,9 @@ const App = () => (
       <CatBar />
 
       <Switch>
-        <Route path='/' component={Home} ></Route>
+        <Route exact path='/' component={Home} ></Route>
+        <Route exact path='/listings' component={ShopContainer} ></Route>
+        <Redirect to="/" />
       </Switch>
     </div>
 
