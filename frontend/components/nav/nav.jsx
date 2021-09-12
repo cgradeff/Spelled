@@ -27,8 +27,8 @@ class NavHeader extends React.Component {
                 
                 <div className='nav-right'>
                     <div className='nav-links'>
-                        <Link to='/listings' >
-                            <div>SHOP</div>
+                        <Link to='/listings' className='shop-link'>
+                            <div >SHOP</div>
                         </Link>
                         <p>SELL</p>
                     </div>

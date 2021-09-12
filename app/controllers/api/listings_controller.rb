@@ -9,11 +9,14 @@ class Api::ListingsController < ApplicationController
 
   def index
     @listings = Listing.all
-    # render "api/listings/index"
+    render :index
   end
 
   def show
-    @listing = Listing.find(params[:id])
+    @listing = Listing.find_by(id: params[:id])
+      if @product 
+          render :show
+      end
   end
 
   def create
