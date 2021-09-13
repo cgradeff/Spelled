@@ -1,10 +1,15 @@
 import React from 'react'
 import { withRouter } from 'react-router'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 class UserSettings extends React.Component {
   constructor(props) {
     super(props)
+    this.state = {
+      open: false,
+    }
     this.onClick = this.onClick.bind(this)
+    this.onHover = this.onHover.bind(this)
   }
 
   onClick(e) {
@@ -13,15 +18,37 @@ class UserSettings extends React.Component {
     // this.props.history.push('/');
   }
 
+  onHover(e) {
+    const newState = !this.state.open
+    this.setState({ open: newState })
+  }
+
   render() {
     const signedIn = () => {
       return (
-        <div>
-          <div className="user-settings-options">
-            <button className="user-settings-button" onClick={this.onClick}>
-              LOGOUT
-            </button>
-          </div>
+        // <div>
+        //   <div className="user-settings-options">
+        //     <button className="user-settings-button" onClick={this.onClick}>
+        //       LOGOUT
+        //     </button>
+        //   </div>
+        // </div>
+        <div
+          className="user-settings-options logged-in"
+          onMouseEnter={this.onHover}
+          onMouseLeave={this.onHover}
+        >
+          <div className="user-icon"><FontAwesomeIcon icon={['fas', 'user-circle']} /></div>
+          {this.state.open && (
+            <ul className="menu" onClick={(e) => e.stopPropagation()}>
+                <li className='menu-item'>MY ITEMS</li>
+                <li className='menu-item'>
+                  <button className="user-settings-button" onClick={this.onClick}>
+                    LOGOUT
+                  </button>
+                </li>
+            </ul>
+          )}
         </div>
       )
     }

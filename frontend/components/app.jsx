@@ -9,10 +9,10 @@ import ShopContainer from './listings/shop_container';
 import ListingShowContainer from "./listings/listing_show_container";
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
-import { faChevronLeft, faChevronRight, faSearch } from '@fortawesome/free-solid-svg-icons';
+import { faChevronLeft, faChevronRight, faSearch, faUserCircle } from '@fortawesome/free-solid-svg-icons';
 
 
-library.add(fab, faChevronRight, faChevronLeft, faSearch);
+library.add(fab, faChevronRight, faChevronLeft, faSearch, faUserCircle);
 
 const App = () => (
   <div>

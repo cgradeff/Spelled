@@ -38,6 +38,10 @@
   padding-bottom: 10px;
 }
 
+.menu-item:hover {
+  color: blue;
+}
+
 .cat-container {
   width: fit-content;
   height: 45px;
@@ -55,6 +59,10 @@
   height: 45px;
   font-size: 12px;
   letter-spacing: normal;
+}
+
+.cat-title:hover {
+  color: blue;
 }
 
 .menu {
