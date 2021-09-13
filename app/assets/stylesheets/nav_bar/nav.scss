@@ -1,25 +1,24 @@
 // main nav bar
 .nav-header {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    position: fixed;
-    justify-content: space-between;
-    background-color: white;
-    border-bottom: 1px solid;
-    border-color: rgb(221, 221, 221);
-    height: 75px;
-    z-index: 10;
-    
+  display: flex;
+  width: 100%;
+  align-items: center;
+  position: fixed;
+  justify-content: space-between;
+  background-color: white;
+  border-bottom: 1px solid;
+  border-color: rgb(221, 221, 221);
+  height: 75px;
+  z-index: 10;
 }
 
 // right of search bar
 .nav-right {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 350px;
-    padding-right: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 350px;
+  padding-right: 35px;
 }
 
 // title/logo + search bar
@@ -32,126 +31,148 @@
   align-items: center;
 }
 
-
 .title {
-    height: 27px;
+  height: 27px;
 }
 
 // user settings
 .user-settings-options {
-    display: flex;
-    padding-right: 30px;
-    font-size: 12px;
-    width: 165px;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  padding-right: 30px;
+  font-size: 12px;
+  width: 165px;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .user-settings-button {
-    width: 70px;
-    height: 30px;
-    font-weight: 550;
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 2px;
+  width: 70px;
+  height: 30px;
+  font-weight: 550;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 2px;
 }
 
 .logged-in {
-    background-color: blue;
+  background-color: white;
+  border-bottom: 1px solid;
+  border-left: 1px solid;
+  border-right: 1px solid;
+  border-color: rgb(221, 221, 221);
+  width: auto;
+  height: auto;
+  display: flexbox;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  color: black;
+  position: relative;
+  top: 30px;
+  margin-top: 46px;
+  list-style: none;
+  min-width: 5rem;
+}
+
+.user-icon {
+  background-color: burlywood;
+  color: black;
+  font-size: 18px;
 }
 
 // auth buttons
 
 #login {
-    background-color: transparent;
-    border-color: rgb(221, 221, 221);
+  background-color: transparent;
+  border-color: rgb(221, 221, 221);
 }
 
 #signup {
-    border-color: black;
-    background-color: black;
-    color: white;
+  border-color: black;
+  background-color: black;
+  color: white;
 }
 
 #signup:hover {
-    background-color: rgb(53, 53, 53);
-    border-color: rgb(53, 53, 53);
+  background-color: rgb(53, 53, 53);
+  border-color: rgb(53, 53, 53);
 }
 
 #login:hover {
-    background-color: rgb(251, 251, 251);
-    color: blue;
-    border-color: black;
+  background-color: rgb(251, 251, 251);
+  color: blue;
+  border-color: black;
 }
 
 // sell and shop links
 .nav-links {
-    color: black;
-    font-size: 12px;
-    font-weight: 450;
-    letter-spacing: normal;
-    width: 140px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+  color: black;
+  font-size: 12px;
+  font-weight: 450;
+  letter-spacing: normal;
+  width: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .nav-links p:hover {
-    color: blue;
+  color: blue;
 }
 
 .shop-link {
-    color: black;
-    text-decoration: none;
+  color: black;
+  text-decoration: none;
 }
 
 .shop-link:hover {
-    color: blue;
+  color: blue;
 }
 
 // search bar
 
 .search-bar {
-    border: 1px solid black;
-    border-radius: 2px;
-    margin-left: 35px;
+  border: 1px solid black;
+  border-radius: 2px;
+  margin-left: 35px;
 }
 
 .search-form {
-    display: flex;
-    align-items: center;
-    min-width: fit-content;
+  display: flex;
+  align-items: center;
+  min-width: fit-content;
 }
 
 .search-input:focus {
-    outline: none;
+  outline: none;
 }
 
 .search-input {
-    width: 440px;
-    height: 38px;
-    border: none;
-    font-size: 14px;
-    font-weight: 300;
-    color: rgb(190, 190, 190);
+  width: 440px;
+  height: 38px;
+  border: none;
+  font-size: 14px;
+  font-weight: 300;
+  color: rgb(190, 190, 190);
 }
 
 .search-icon {
-    height: 35px;
-    width: 40px;
-    font-size: 16px;
-    font-weight: lighter;
-    border: none;
-    background-color: transparent;
+  height: 35px;
+  width: 40px;
+  font-size: 16px;
+  font-weight: lighter;
+  border: none;
+  background-color: transparent;
 }
 
 .search-button {
-    height: 33px;
-    width: 80px;
-    border: 1px solid rgb(221, 221, 221);
-    background-color: transparent;
-    margin-right: 5px;
-    border-radius: 4px;
-    font-size: 14px;
-    font-weight: 550;
+  height: 33px;
+  width: 80px;
+  border: 1px solid rgb(221, 221, 221);
+  background-color: transparent;
+  margin-right: 5px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 550;
 }

@@ -1,6 +1,8 @@
 import React from 'react'
 import { withRouter } from 'react-router'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Link } from 'react-router-dom';
+
 
 class UserSettings extends React.Component {
   constructor(props) {
@@ -34,13 +36,13 @@ class UserSettings extends React.Component {
         //   </div>
         // </div>
         <div
-          className="user-settings-options logged-in"
+          className="user-settings-options"
           onMouseEnter={this.onHover}
           onMouseLeave={this.onHover}
         >
-          <div className="user-icon"><FontAwesomeIcon icon={['fas', 'user-circle']} /></div>
+          <div className="user-icon"><Link to={`/users/${this.props.currentUser.id}`}><FontAwesomeIcon icon={['fas', 'user-circle']} /></Link></div>
           {this.state.open && (
-            <ul className="menu" onClick={(e) => e.stopPropagation()}>
+            <ul className="logged-in" onClick={(e) => e.stopPropagation()}>
                 <li className='menu-item'>MY ITEMS</li>
                 <li className='menu-item'>
                   <button className="user-settings-button" onClick={this.onClick}>

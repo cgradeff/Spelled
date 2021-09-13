@@ -13,26 +13,28 @@ Listing.destroy_all
 
 user = User.create!(
     email: "Demo@gmail.com",
-    password: "ILoveMagic!"
+    password: "ILoveMagic!",
+    username: "demo",
+    bio: "this is a demo user profile"
 )
 
 color = Color.create!(
-    color: 'blue'
+    color: 'black'
 )
 
 types = Type.create!(
-    name: 'ugh'
+    name: 'creature'
 )
 
 list1 = Listing.create!(
-    title: 'sup',
-    body: 'hey',
-    price: 2,
-    offer: 'false',
+    title: 'Archon of Cruelty',
+    body: 'one of my favorite cards in a belbe deck, also has an old boarder',
+    price: 50,
+    offer: 'true',
     sold: 'false',
-    condition: 'bad',
-    rarity: 'common',
-    mana: 4,
+    condition: 'used',
+    rarity: 'mythic rare',
+    mana: 8,
     author_id: user.id
 )
 

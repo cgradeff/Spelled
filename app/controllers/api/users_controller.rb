@@ -1,4 +1,5 @@
 class Api::UsersController < ApplicationController
+    protect_from_forgery
     
     def show 
         @user = User.find_by(email: params[:email])
@@ -28,6 +29,6 @@ class Api::UsersController < ApplicationController
     private 
     
     def user_params
-        params.require(:user).permit(:email, :password, :username)
+        params.require(:user).permit(:email, :password, :username, :bio)
     end
 end

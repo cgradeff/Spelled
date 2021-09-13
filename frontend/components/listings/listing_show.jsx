@@ -12,6 +12,10 @@ class ListingShow extends React.Component {
     }
 
     render() { 
+        const { listing } = this.props;
+        if (!listing) {
+            return null;
+        }
         return( 
             <div className="listing-show">
                 <div className="listing-show-text">
