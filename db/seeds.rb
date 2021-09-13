@@ -18,6 +18,20 @@ user = User.create!(
     bio: "this is a demo user profile"
 )
 
+user1 = User.create!(
+    email: "moominismean@gmail.com",
+    password: "Iammean123",
+    username: "mooshi",
+    bio: "Magic lover, fav decks are green/black"
+)
+
+user2 = User.create!(
+    email: "landfalcon@gmail.com",
+    password: "Iamthecoolest",
+    username: "thea",
+    bio: "I have the coolest cards"
+)
+
 color = Color.create!(
     color: 'black'
 )
@@ -39,15 +53,27 @@ list1 = Listing.create!(
 )
 
 list2 = Listing.create!(
-    title: 'sup1',
-    body: 'hey',
-    price: 2,
+    title: 'Belbe, Corrupted Observer',
+    body: 'super sick commander',
+    price: 5,
+    offer: 'true',
+    sold: 'false',
+    condition: 'new',
+    rarity: 'rare',
+    mana: 2,
+    author_id: user.id
+)
+
+list3 = Listing.create!(
+    title: 'Tuvasa the Sunlit',
+    body: 'she lovessss enchantments',
+    price: 100,
     offer: 'false',
     sold: 'false',
-    condition: 'bad',
-    rarity: 'common',
-    mana: 4,
-    author_id: user.id
+    condition: 'new',
+    rarity: 'mythic rare',
+    mana: 3,
+    author_id: user2.id
 )
 
 

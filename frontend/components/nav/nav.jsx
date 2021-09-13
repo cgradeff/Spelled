@@ -30,7 +30,10 @@ class NavHeader extends React.Component {
                         <Link to='/listings' className='shop-link'>
                             <div >SHOP</div>
                         </Link>
-                        <p>SELL</p>
+                        <Link to='/sell' className='shop-link'>
+                           <div>SELL</div> 
+                        </Link>
+                        
                     </div>
                     <UserSettings />
                 </div>

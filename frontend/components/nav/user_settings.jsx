@@ -28,13 +28,6 @@ class UserSettings extends React.Component {
   render() {
     const signedIn = () => {
       return (
-        // <div>
-        //   <div className="user-settings-options">
-        //     <button className="user-settings-button" onClick={this.onClick}>
-        //       LOGOUT
-        //     </button>
-        //   </div>
-        // </div>
         <div
           className="user-settings-options"
           onMouseEnter={this.onHover}
@@ -82,4 +75,4 @@ class UserSettings extends React.Component {
   }
 }
 
-export default withRouter(UserSettings)
+export default withRouter(UserSettings);

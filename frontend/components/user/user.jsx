@@ -1,5 +1,5 @@
 import React from 'react';
-
+import MyListingsContainer from './my_listings_container';
 
 class User extends React.Component {
     constructor(props) {
@@ -11,9 +11,9 @@ class User extends React.Component {
         const user = this.props.currentUser;
         return (
             <div className='user'>
-                <h1>hellooooooo</h1>
                 <h2>{user.username}</h2>
                 <p>{user.bio}</p>
+                <MyListingsContainer />
             </div>
         )
     }

@@ -4,7 +4,7 @@ import React from 'react';
 class ListingShow extends React.Component {
     constructor(props) {
         super(props);
-        
+        // this.author = this.props.fetchUser(this.props.listing.author_id)
     }
 
     componentDidMount(){
@@ -12,7 +12,11 @@ class ListingShow extends React.Component {
     }
 
     render() { 
+        
         const { listing } = this.props;
+
+        
+        // console.log(author)
         if (!listing) {
             return null;
         }
@@ -27,6 +31,8 @@ class ListingShow extends React.Component {
                     <div className="listing-show-mana">{this.props.listing.mana}</div>
                     <div className="listing-show-offer">{this.props.listing.offer}</div>
                     <div className="listing-show-sold">{this.props.listing.sold}</div>
+                    <div className='listing-show-user'>{this.props.listing.author_id}</div>
+                    {/* <div className='listing-show-user'>{this.author.username}</div> */}
                     <div>
                         <button>PURCHASE</button>
                         <button>OFFER</button>

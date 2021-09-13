@@ -6,7 +6,9 @@ class User < ApplicationRecord
     attr_reader :password
 
     has_many :listings,
-        foreign_key: :author_id
+        primary_key: :id,
+        foreign_key: :author_id,
+        class_name: :Listing
 
 
     after_initialize :ensure_session_token
