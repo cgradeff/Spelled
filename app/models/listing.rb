@@ -9,16 +9,16 @@ class Listing < ApplicationRecord
     class_name: :User
   
   # for types
-  has_many :joins
+  has_many :list_types
   has_many :types,
-    through: :joins 
+    through: :list_types 
 
-  # for colors
-  has_many :joins_c
+  # for colors 
+  has_many :list_colors 
   has_many :colors,
-    through: :joins_c
+    through: :list_colors
     
 # Active Storage Association
-  has_one_attached :photo
+  # has_one_attached :photo
 
 end

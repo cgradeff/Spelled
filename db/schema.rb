@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_12_185129) do
+ActiveRecord::Schema.define(version: 2021_09_14_194904) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -50,22 +50,9 @@ ActiveRecord::Schema.define(version: 2021_09_12_185129) do
     t.index ["color"], name: "index_colors_on_color"
   end
 
-  create_table "joins", force: :cascade do |t|
-    t.bigint "listings_id", null: false
-    t.bigint "types_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["listings_id"], name: "index_joins_on_listings_id"
-    t.index ["types_id"], name: "index_joins_on_types_id"
-  end
-
-  create_table "joins_cs", force: :cascade do |t|
-    t.bigint "listings_id", null: false
-    t.bigint "colors_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["colors_id"], name: "index_joins_cs_on_colors_id"
-    t.index ["listings_id"], name: "index_joins_cs_on_listings_id"
+  create_table "colors_listings", id: false, force: :cascade do |t|
+    t.bigint "listing_id", null: false
+    t.bigint "color_id", null: false
   end
 
   create_table "listings", force: :cascade do |t|
@@ -85,6 +72,11 @@ ActiveRecord::Schema.define(version: 2021_09_12_185129) do
     t.index ["price"], name: "index_listings_on_price"
     t.index ["rarity"], name: "index_listings_on_rarity"
     t.index ["title"], name: "index_listings_on_title"
+  end
+
+  create_table "listings_types", id: false, force: :cascade do |t|
+    t.bigint "listing_id", null: false
+    t.bigint "type_id", null: false
   end
 
   create_table "types", force: :cascade do |t|
@@ -109,8 +101,4 @@ ActiveRecord::Schema.define(version: 2021_09_12_185129) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "joins", "listings", column: "listings_id"
-  add_foreign_key "joins", "types", column: "types_id"
-  add_foreign_key "joins_cs", "colors", column: "colors_id"
-  add_foreign_key "joins_cs", "listings", column: "listings_id"
 end

@@ -10,6 +10,10 @@
 
 User.destroy_all
 Listing.destroy_all
+Color.destroy_all
+Type.destroy_all
+ListColor.destroy_all
+ListType.destroy_all
 
 user = User.create!(
     email: "Demo@gmail.com",
@@ -76,7 +80,15 @@ list3 = Listing.create!(
     author_id: user2.id
 )
 
+list_color = ListColor.create!(
+    listing_id: list1.id,
+    color_id: color.id
+)
 
+list_type = ListType.create!(
+    listing_id: list1.id,
+    type_id: type.id
+)
 
 
 

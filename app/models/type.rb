@@ -1,5 +1,5 @@
 class Type < ApplicationRecord 
-    has_many :joins
+    has_many :list_types
     has_many :listings,
-        through: :joins 
+        through: :list_types 
 end

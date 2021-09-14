@@ -1,5 +1,5 @@
 class Color < ApplicationRecord 
-    has_many :joins_c
+    has_many :list_colors 
     has_many :listings,
-        through: :joins_c 
+        through: :list_colors
 end
