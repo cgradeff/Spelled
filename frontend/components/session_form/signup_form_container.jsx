@@ -8,25 +8,18 @@ const mapStateToProps = ({ errors }) => {
   return {
     errors: errors.session,
     formType: 'Create an Account',
-    // navLink: <Link to="/login">Log in</Link>,
   }
 }
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    processForm: (user) => dispatch(signup(user)),
+    processForm: user => dispatch(signup(user)),
     otherForm: (
-      <span>
-        <button
-          className="modal-bottom-button"
-          onClick={(e) => {
-            e.preventDefault()
-            dispatch(openModal('login'))
-          }}
-        >
-          Login
-        </button>
-      </span>
+          <span><button className="modal-bottom-button" onClick={(e) => {
+              e.preventDefault()
+              dispatch(openModal('login'))
+            }
+          }>Login</button></span>
     ),
     closeModal: () => dispatch(closeModal()),
   }

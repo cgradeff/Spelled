@@ -15,6 +15,10 @@ class Sell extends React.Component {
        return e => this.setState({[field]: e.currentTarget.value});
     }
 
+    componentDidMount() {
+        this.props.requestListings();
+    }
+
     render() {
         return (
             <div className='sell'>
@@ -41,6 +45,7 @@ class Sell extends React.Component {
                     Offer 
                     <input type="offer" value={this.state.offer} onChange={this.update('offer')}/>
                     <br />
+                    <input type="author_id" value={this.state.author_id} onChange={this.update('author_id')}/>
 
                     <button type='submit' value={this.props.formType}>Create</button>
                 </form>

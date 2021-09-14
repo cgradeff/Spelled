@@ -1,11 +1,13 @@
 import { connect } from 'react-redux';
-import { createListing } from '../../actions/listing_actions';
+import { createListing, requestListings } from '../../actions/listing_actions';
 import Sell from './sell';
 
 const mSTP = state => {
-    console.log(state)
+    // console.log(state)
+    // console.log(state.entities.users[state.session.id].id)
     return {
         currentUser: state.entities.users[state.session.id],
+        listings: Object.values(state.entities.listings),
         listing: {
             title: '',
             mana: '',
@@ -22,7 +24,8 @@ const mSTP = state => {
 
 const mDTP = dispatch => {
     return {
-        submitListing: listing => dispatch(createListing(listing))
+        submitListing: listing => dispatch(createListing(listing)),
+        requestListings: () => dispatch(requestListings()), 
     }
 }
 
