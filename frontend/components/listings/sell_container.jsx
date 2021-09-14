@@ -19,14 +19,14 @@ const mSTP = state => {
             sold: 'false',
             author_id: state.entities.users[state.session.id].id
         },
-        formType: 'Create Listing'
+        formType: 'Add a new listing'
     }
 }
 
 const mDTP = dispatch => {
     return {
         submitListing: listing => dispatch(createListing(listing)),
-        requestListings: () => dispatch(requestListings()), 
+        // requestListings: () => dispatch(requestListings()), 
     }
 }
 

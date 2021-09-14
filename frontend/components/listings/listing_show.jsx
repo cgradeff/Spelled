@@ -1,5 +1,6 @@
 import React from 'react';
-// add links to edit and delete buttons
+import { Link } from 'react-router-dom';
+// add links to edit button
 
 class ListingShow extends React.Component {
     constructor(props) {
@@ -15,8 +16,6 @@ class ListingShow extends React.Component {
         
         const { listing, deleteListing } = this.props;
 
-        
-        console.log(this.props.currentUser)
         if (!listing) {
             return null;
         }
@@ -41,7 +40,8 @@ class ListingShow extends React.Component {
                             <button>Message</button>
                         </div> : 
                         <div className='list-show-buttons'> 
-                            <button>Edit</button>
+                            {/* <button>Edit</button> */}
+                            <div className='link-button'><Link to={`/listings/${listing.id}/edit`}>Edit</Link></div>
                             <button onClick={() => deleteListing(listing.id)}>Delete</button>
                         </div>}
                         

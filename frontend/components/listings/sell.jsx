@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 class Sell extends React.Component {
     constructor(props) {
         super(props);
@@ -15,11 +16,12 @@ class Sell extends React.Component {
        return e => this.setState({[field]: e.currentTarget.value});
     }
 
-    componentDidMount() {
-        this.props.requestListings();
-    }
+    // componentDidMount() {
+    //     this.props.requestListings();
+    // }
 
     render() {
+
         return (
             <div className='sell'>
                 <h2>{this.props.formType}</h2>
@@ -48,7 +50,7 @@ class Sell extends React.Component {
                     <input type="sold" value={this.state.sold} onChange={this.update('sold')}/>
                     <input type="author_id" value={this.state.author_id} onChange={this.update('author_id')}/>
 
-                    <button type='submit' value={this.props.formType}>Create</button>
+                    <button type='submit' value={this.props.formType}>Publish</button>
                 </form>
             </div>
         )

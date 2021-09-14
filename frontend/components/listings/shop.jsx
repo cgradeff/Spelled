@@ -18,7 +18,6 @@ class Shop extends React.Component {
                         <ShopItem listing={listing} deleteListing={deleteListing} key={listing.id}/>
                     ))}
                 </ul>
-                <Link to='/listings/new'>New Listing</Link>
             </div>
         )
     }
