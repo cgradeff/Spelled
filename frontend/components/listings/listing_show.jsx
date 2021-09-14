@@ -1,5 +1,5 @@
 import React from 'react';
-
+// add links to edit and delete buttons
 
 class ListingShow extends React.Component {
     constructor(props) {
@@ -13,10 +13,10 @@ class ListingShow extends React.Component {
 
     render() { 
         
-        const { listing } = this.props;
+        const { listing, deleteListing } = this.props;
 
         
-        // console.log(author)
+        console.log(this.props.currentUser)
         if (!listing) {
             return null;
         }
@@ -32,11 +32,19 @@ class ListingShow extends React.Component {
                     <div className="listing-show-offer">{this.props.listing.offer}</div>
                     <div className="listing-show-sold">{this.props.listing.sold}</div>
                     <div className='listing-show-user'>{this.props.listing.author_id}</div>
-                    {/* <div className='listing-show-user'>{this.author.username}</div> */}
+                    
                     <div>
-                        <button>PURCHASE</button>
-                        <button>OFFER</button>
-                        <button>MESSAGE</button>
+                        { (this.props.currentUser == undefined) || (this.props.currentUser.id != this.props.listing.author_id) ? 
+                        <div className='list-show-buttons'>
+                            <button>Purchase</button>
+                            <button>Offer</button>
+                            <button>Message</button>
+                        </div> : 
+                        <div className='list-show-buttons'> 
+                            <button>Edit</button>
+                            <button onClick={() => deleteListing(listing.id)}>Delete</button>
+                        </div>}
+                        
                     </div>
                 </div>
 

@@ -2,9 +2,7 @@ class Api::ListingsController < ApplicationController
   before_action :require_logged_in, only: [:create, :destroy]
   before_action :require_user_owns_listing, only: [:edit, :update, :destroy]
 
-  # def new
-  #   @listing = Listing.new
-  # end
+  # fix render route for destroy
 
 
   def index
@@ -35,10 +33,9 @@ class Api::ListingsController < ApplicationController
   end
 
   def destroy
-    @listing = current_user.listings.find_by(id: params[:id])
-    if @listing && @listing.delete
-        render :index
-    end
+    @listing = Listing.find_by(id: params[:id])
+    @listing.destroy 
+    render :show 
   end
 
   private

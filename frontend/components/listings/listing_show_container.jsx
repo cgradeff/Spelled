@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { requestListing } from '../../actions/listing_actions';
+import { requestListing,  deleteListing} from '../../actions/listing_actions';
 import { fetchUser } from '../../util/user_api_util';
 
 import ListingShow from './listing_show';
@@ -15,6 +15,7 @@ const mSTP = (state, ownProps) => {
 const mDTP = dispatch => ({
     fetchUser: userId => dispatch(fetchUser(userId)),
     requestListing: (id) => dispatch(requestListing(id)), 
+    deleteListing: listingId => dispatch(deleteListing(listingId))
 })
 
 export default connect(mSTP, mDTP)(ListingShow)
