@@ -1,6 +1,6 @@
 class Api::ListingsController < ApplicationController
   before_action :require_logged_in, only: [:create, :destroy]
-  before_action :require_user_owns_listing, only: [ :destroy]
+  before_action :require_user_owns_listing, only: [:update, :destroy]
 
   # fix render route for destroy
 
@@ -26,11 +26,6 @@ class Api::ListingsController < ApplicationController
       render json: @listing.errors.full_messages, status: 422
     end
   end
-
-  # def edit
-  #   @listing = Listing.find(params[:id])
-  #   render :show
-  # end
 
   def update
     @listing = Listing.find_by(id: params[:id])
