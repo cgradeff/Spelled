@@ -45,6 +45,7 @@ class Sell extends React.Component {
                     Offer 
                     <input type="offer" value={this.state.offer} onChange={this.update('offer')}/>
                     <br />
+                    <input type="sold" value={this.state.sold} onChange={this.update('sold')}/>
                     <input type="author_id" value={this.state.author_id} onChange={this.update('author_id')}/>
 
                     <button type='submit' value={this.props.formType}>Create</button>

@@ -2,9 +2,9 @@ class Api::ListingsController < ApplicationController
   before_action :require_logged_in, only: [:create, :destroy]
   before_action :require_user_owns_listing, only: [:edit, :update, :destroy]
 
-  def new
-    @listing = Listing.new
-  end
+  # def new
+  #   @listing = Listing.new
+  # end
 
 
   def index
@@ -20,8 +20,13 @@ class Api::ListingsController < ApplicationController
   end
 
   def create
-    @listing = current_user.listings.new(listing_params)
-    render :show
+    @listing = Listing.create!(listing_params)
+
+    if @listing.save 
+      render :show
+    else
+      render json: @listing.errors.full_messages, status: 422
+    end
   end
 
   def edit
@@ -44,7 +49,7 @@ class Api::ListingsController < ApplicationController
   end
 
   def listing_params
-    params.require(:listing).permit(:title, :body, :price, :offer, :sold, :condition, :rarity, :mana, :photo, :author_id)
+    params.require(:listing).permit(:title, :body, :price, :offer, :sold, :condition, :rarity, :mana, :author_id, :photo)
   end
 
 end

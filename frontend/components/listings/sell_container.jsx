@@ -3,7 +3,7 @@ import { createListing, requestListings } from '../../actions/listing_actions';
 import Sell from './sell';
 
 const mSTP = state => {
-    // console.log(state)
+    console.log(state)
     // console.log(state.entities.users[state.session.id].id)
     return {
         currentUser: state.entities.users[state.session.id],
@@ -16,6 +16,7 @@ const mSTP = state => {
             body: '',
             price: 0,
             offer: '',
+            sold: 'false',
             author_id: state.entities.users[state.session.id].id
         },
         formType: 'Create Listing'
