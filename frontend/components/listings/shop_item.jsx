@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 const ShopItem = ({listing}) => {
     return (
         <li className='shop-item'>
+            <img className="show-page-image" src={listing.photoUrl} alt="" />
             <Link to={`/listings/${listing.id}`}>
                 <h3>{listing.title}</h3>
             </Link>

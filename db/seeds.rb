@@ -68,7 +68,8 @@ list2 = Listing.create!(
     author_id: user.id
 )
 
-file1 = URI.open("https://spelled-dev.s3.amazonaws.com/test.jpg")
+# file1 = URI.open("https://spelled-dev.s3.amazonaws.com/test.jpg")
+file1 = URI.open("https://spelled-seeds.s3.amazonaws.com/test.jpg")
 list2.photo.attach(io: file1, filename: "test.jpg")
 
 list3 = Listing.create!(
