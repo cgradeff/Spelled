@@ -3,6 +3,8 @@ import {Link} from 'react-router-dom';
 import Slider from './slider';
 import Trends from './trends';
 
+// link shop feed button to shop pg
+
 class Home extends React.Component {
     constructor(props) {
         super(props)

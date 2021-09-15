@@ -55,6 +55,8 @@ list1 = Listing.create!(
     mana: 8,
     author_id: user.id
 )
+file1 = URI.open("https://spelled-seeds.s3.amazonaws.com/test.jpg")
+list1.photo.attach(io: file1, filename: "test.jpg")
 
 list2 = Listing.create!(
     title: 'Belbe, Corrupted Observer',
@@ -68,9 +70,8 @@ list2 = Listing.create!(
     author_id: user.id
 )
 
-# file1 = URI.open("https://spelled-dev.s3.amazonaws.com/test.jpg")
-file1 = URI.open("https://spelled-seeds.s3.amazonaws.com/test.jpg")
-list2.photo.attach(io: file1, filename: "test.jpg")
+# file2 = URI.open("https://spelled-seeds.s3.amazonaws.com/belbe.HEIC")
+# list2.photo.attach(io: file2, filename: "belbe.HEIC")
 
 list3 = Listing.create!(
     title: 'Tuvasa the Sunlit',
