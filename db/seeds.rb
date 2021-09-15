@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# require 'open-uri'
+require 'open-uri'
 
 User.destroy_all
 Listing.destroy_all
@@ -67,6 +67,9 @@ list2 = Listing.create!(
     mana: 2,
     author_id: user.id
 )
+
+file1 = URI.open("https://spelled-dev.s3.amazonaws.com/test.jpg")
+list2.photo.attach(io: file1, filename: "test.jpg")
 
 list3 = Listing.create!(
     title: 'Tuvasa the Sunlit',

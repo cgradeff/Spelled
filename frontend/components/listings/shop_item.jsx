@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const ShopItem = ({listing, deleteListing}) => {
+const ShopItem = ({listing}) => {
     return (
         <li className='shop-item'>
             <Link to={`/listings/${listing.id}`}>
