@@ -1,11 +1,9 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-// add links to edit button
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 class ListingShow extends React.Component {
   constructor(props) {
     super(props)
-    // this.author = this.props.fetchUser(this.props.listing.author_id)
   }
 
   componentDidMount() {
@@ -15,13 +13,30 @@ class ListingShow extends React.Component {
   render() {
     const { listing, deleteListing } = this.props
 
-    if (!listing) {
+    if (listing == undefined || listing.names == undefined) {
       return null
     }
+    
     return (
       <div className="listing-show">
         <img className="show-page-image" src={listing.photoUrl} alt="" />
-        
+
+        <ul className='listing-show-types'>
+          {listing.names.map (val => 
+            <li key={val.name}>
+              {val.name}
+            </li>)
+          }
+        </ul>
+
+        <ul className='listing-show-colors'>
+          {listing.colors.map (val => 
+            <li key={val.color}>
+              {val.color}
+            </li>)
+          }
+        </ul>
+
         <div className="listing-show-text">
           <h1 className="listing-show-title">{this.props.listing.title}</h1>
           <div className="listing-show-description">
@@ -49,13 +64,12 @@ class ListingShow extends React.Component {
               </div>
             ) : (
               <div className="list-show-buttons">
-                {/* <button>Edit</button> */}
                 <div className="link-button">
                   <Link to={`/listings/${listing.id}/edit`}>Edit</Link>
                 </div>
-                <button onClick={() => deleteListing(listing.id)}>
+                <Link to={`/users/${this.props.currentUser.id}`}><button onClick={() => deleteListing(listing.id)}>
                   Delete
-                </button>
+                </button></Link>
               </div>
             )}
           </div>

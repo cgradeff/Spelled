@@ -44,6 +44,14 @@ type = Type.create!(
     name: 'creature'
 )
 
+type1 = Type.create!(
+    name: 'artifact'
+)
+
+type2 = Type.create!(
+    name: 'land'
+)
+
 list1 = Listing.create!(
     title: 'Archon of Cruelty',
     body: 'one of my favorite cards in a belbe deck, also has an old boarder',
@@ -92,6 +100,21 @@ list_color = ColorsListing.create!(
 
 list_type = ListingsType.create!(
     listing_id: list1.id,
+    type_id: type.id
+)
+
+list_type1 = ListingsType.create!(
+    listing_id: list1.id,
+    type_id: type1.id
+)
+
+list_type2 = ListingsType.create!(
+    listing_id: list2.id,
+    type_id: type.id
+)
+
+list_type2 = ListingsType.create!(
+    listing_id: list3.id,
     type_id: type.id
 )
 

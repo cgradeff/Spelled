@@ -12,7 +12,7 @@ class Api::ListingsController < ApplicationController
 
   def show
     @listing = Listing.find_by(id: params[:id])
-      if @product 
+      if @product
           render :show
       end
   end
@@ -21,6 +21,17 @@ class Api::ListingsController < ApplicationController
     @listing = Listing.create!(listing_params)
 
     if @listing.save 
+
+      # type stuff
+      # params[:types].each do |type|
+      #   @list_type = ListingsType.create!(listing_id: @listing.id, type_id: type)
+      #   if @list_type.save
+      #     next
+      #   else
+      #     render @list_type.errors.full_messages, status: 422
+      #   end
+      # end
+
       render :show
     else
       render json: @listing.errors.full_messages, status: 422

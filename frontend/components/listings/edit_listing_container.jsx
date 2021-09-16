@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { requestListing, updateListing } from '../../actions/listing_actions';
-import Sell from './sell';
+import EditListing from './edit_listing';
 
 class EditListingForm extends React.Component {
   componentDidMount() {
@@ -13,7 +13,7 @@ class EditListingForm extends React.Component {
 
     if (!listing) return null;
     return (
-      <Sell
+      <EditListing
         listing={listing}
         formType={formType}
         submitListing={submitListing} />

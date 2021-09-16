@@ -34,8 +34,8 @@ export const requestListing = listingId => dispatch => (
     ListingAPIUtil.fetchListing(listingId)
     .then(listing => dispatch(receiveListing(listing)))
 )
-
-export const createListing = listing => dispatch => (
+// here
+export const createListing = (listing) => dispatch => (
     ListingAPIUtil.createListing(listing)
     .then(listing => dispatch(receiveListing(listing)))
 )

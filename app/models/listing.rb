@@ -9,12 +9,20 @@ class Listing < ApplicationRecord
     class_name: :User
   
   # for types
-  has_many :list_types
+  has_many :list_types,
+    primary_key: :id,
+    foreign_key: :listing_id,
+    class_name: :ListingsType
+
   has_many :types,
     through: :list_types 
 
   # for colors 
-  has_many :list_colors 
+  has_many :list_colors, 
+    primary_key: :id,
+    foreign_key: :listing_id,
+    class_name: :ColorsListing
+
   has_many :colors,
     through: :list_colors
     

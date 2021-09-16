@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { createListing, requestListings } from '../../actions/listing_actions';
+import { createListing } from '../../actions/listing_actions';
 import Sell from './sell';
 
 const mSTP = state => {
@@ -8,24 +8,29 @@ const mSTP = state => {
     return {
         currentUser: state.entities.users[state.session.id],
         listings: Object.values(state.entities.listings),
-        listing: {
-            title: '',
-            mana: '',
-            rarity: '',
-            condition: '',
-            body: '',
-            price: 0,
-            offer: '',
-            sold: 'false',
-            author_id: state.entities.users[state.session.id].id
-        },
+        // listing: {
+        //     title: '',
+        //     mana: '',
+        //     rarity: '',
+        //     condition: '',
+        //     body: '',
+        //     price: 0,
+        //     offer: '',
+        //     sold: 'false',
+        //     author_id: state.entities.users[state.session.id].id,
+        //     // photo: {imageFile: null, imageUrl: null}
+        // },
+        // types: {
+
+        // }
+        // author_id: state.entities.users[state.session.id].id,
         formType: 'Add a new listing'
     }
 }
 
 const mDTP = dispatch => {
     return {
-        submitListing: listing => dispatch(createListing(listing)),
+        submitListing: (listing) => dispatch(createListing(listing)),
         // requestListings: () => dispatch(requestListings()), 
     }
 }
