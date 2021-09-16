@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { requestListing, updateListing } from '../../actions/listing_actions';
 import EditListing from './edit_listing';
+import { withRouter } from 'react-router';
 
 class EditListingForm extends React.Component {
   componentDidMount() {
@@ -15,8 +16,8 @@ class EditListingForm extends React.Component {
     return (
       <EditListing
         listing={listing}
-        formType={formType}
-        submitListing={submitListing} />
+        submitListing={submitListing} 
+        />
     );
   }
 }
@@ -24,7 +25,6 @@ class EditListingForm extends React.Component {
 const mSTP = (state, ownProps) => {
   return {
     listing: state.entities.listings[ownProps.match.params.listingId],
-    formType: 'Edit your listing'
   }
 }
 

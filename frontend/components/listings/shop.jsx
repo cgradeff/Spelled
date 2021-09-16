@@ -12,7 +12,7 @@ class Shop extends React.Component {
         
         return (
             <div className='shop'>
-                <h2>Available Listings</h2>
+                <h2 className='shop-title'>Available Listings</h2>
                 <ul className='shop-list'>
                     {listings.map(listing => (
                         <ShopItem listing={listing} deleteListing={deleteListing} key={listing.id}/>

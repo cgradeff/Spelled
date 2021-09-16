@@ -3,17 +3,17 @@ import { Link } from 'react-router-dom';
 
 const ShopItem = ({listing}) => {
     return (
-        <li className='shop-item'>
-            <img className="show-page-image" src={listing.photoUrl} alt="" />
-            <Link to={`/listings/${listing.id}`}>
-                <h3>{listing.title}</h3>
-            </Link>
+        <Link to={`/listings/${listing.id}`} className='shop-item-link'><li className='shop-item'>
+            <img className="show-item-image" src={listing.photoUrl} alt="" />
+            <div className='shop-item-text'>
+                <h3 className='shop-item-title'>{listing.title}</h3>
+                <div className='price'>
+                    <p>$</p>
+                    <p>{listing.price}</p>
+                </div>
+            </div>
             
-            <p>{listing.body}</p>
-            <p>$</p>
-            <p>{listing.price}</p>
-            <p>{listing.id}</p>
-        </li>
+        </li></Link>
     )
 }
 

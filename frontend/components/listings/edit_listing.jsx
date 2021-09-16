@@ -1,26 +1,35 @@
 import React from 'react';
+import { withRouter } from 'react-router';
+
+//fix history stuff
 
 class EditListing extends React.Component {
     constructor(props) {
         super(props);
         this.state = this.props.listing;
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.navToShow = this.navToShow.bind(this);
     }
 
     handleSubmit(e) {
+        e.preventDefault();
         this.props.submitListing(this.state)
+        this.navToShow();
     }
 
     update(field) {
        return e => this.setState({[field]: e.currentTarget.value}); 
     }
 
+    navToShow() {
+        const url = `/users/${this.props.listing.author_id}`
+        this.props.history.push(url);
+    }
 
     render() {
-        console.log(this);
         return (
             <div className='sell'>
-                <h2>{this.props.formType}</h2>
+                <h2>Edit your listing</h2>
                 <form onSubmit={this.handleSubmit}>
                     Title
                     <input type="text" value={this.state.title} onChange={this.update('title')}/>
@@ -45,11 +54,11 @@ class EditListing extends React.Component {
                     <br />
                     <input type="sold" value={this.state.sold} onChange={this.update('sold')}/>
 
-                    <button type='submit' value={this.props.formType}>Publish</button>
+                    <button type='submit'>Publish</button>
                 </form>
             </div>
         )
     }
 }
 
-export default EditListing;
+export default withRouter(EditListing);

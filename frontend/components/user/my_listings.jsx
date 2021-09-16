@@ -28,7 +28,7 @@ class MyListings extends React.Component {
     return (
       <div className='my-listings'>
         <h1>My Items</h1>
-        <ul>
+        <ul className='shop-list'>
           {listings.map(listing => (
             <ShopItem listing={listing} deleteListing={deleteListing} key={listing.id}/>
           ))}

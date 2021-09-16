@@ -8,13 +8,6 @@ import Trends from './trends';
 class Home extends React.Component {
     constructor(props) {
         super(props)
-        this.handleClick = this.handleClick.bind(this)
-    }
-
-    handleClick(e) {
-        
-        e.preventDefault()
-        // this.props.history.push('/')
     }
 
     render() {
@@ -28,7 +21,7 @@ class Home extends React.Component {
                         <p>selling and exporing Magic cards.</p>
                     </div>
                     
-                    <button>SHOP THE FEED</button>
+                    <Link to='/listings'><button>SHOP THE FEED</button></Link>
                 </div>
             </div>
         )

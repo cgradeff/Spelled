@@ -1,5 +1,6 @@
 import React from 'react';
 import MyListingsContainer from './my_listings_container';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 class User extends React.Component {
     constructor(props) {
@@ -11,8 +12,15 @@ class User extends React.Component {
         const user = this.props.currentUser;
         return (
             <div className='user'>
-                <h2>{user.username}</h2>
-                <p>{user.bio}</p>
+                <div className='user-top'>
+                    <div className='user-info'>
+                        <FontAwesomeIcon icon={['fas', 'user-circle']} className='user-pic'/>
+                        <h2>{user.username}</h2>
+                    </div>
+                    <p>{user.bio}</p>
+                </div>
+                
+                
                 <MyListingsContainer />
             </div>
         )

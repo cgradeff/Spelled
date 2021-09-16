@@ -1,9 +1,61 @@
+// sell page
 .shop {
     color: black;
-    background-color: cadetblue;
-    height: 2000px;
+    // background-color: cadetblue;
+    height: fit-content;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: light;
+    letter-spacing: normal;
+    margin-bottom: 100px;
 }
 
+.shop-list {
+    display: flex;
+    flex-wrap: wrap;
+    height: fit-content;
+    padding-bottom: 20px;
+}
+
+.shop-title {
+    padding-left: 50px;
+    font-size: 20px;
+    font-weight: 450;
+}
+
+// shop item
 .shop-item {
-    height: 500px;
+    // background-color: burlywood;
+    height: fit-content;
+    list-style-type: none;
+    text-decoration: none;
+    padding: 5px;
+    margin-bottom: 15px;
+}
+
+.shop-item-link {
+    text-decoration: none;
+}
+
+.shop-item-text {
+    color: black;
+    font-size: 12px;
+}
+
+.price {
+    display: flex;
+    // background-color: blue;
+    line-height: 1px;
+    font-weight: 450;
+}
+
+.shop-item-title {
+    border-top: 1px solid rgb(221, 221, 221);
+    padding-top: 15px;
+    line-height: 3px;
+    font-weight: 500;
+}
+
+.show-item-image {
+    height: 300px;
 }

@@ -1,16 +1,10 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {Link} from 'react-router-dom';
 
 class Slider extends React.Component {
     constructor(props) {
         super(props)
-        this.handleClick = this.handleClick.bind(this)
-    }
-
-    handleClick(e) {
-        
-        e.preventDefault()
-        // this.props.history.push('/')
     }
 
     render() {
@@ -23,7 +17,7 @@ class Slider extends React.Component {
                             <p className='slider-p'>THIS IS PLACEHOLDER TEXT</p>
                             <h2 className='slider-title'>Placeholder Here</h2>
                         </div>
-                        <button onClick={this.handleClick}>Shop Now</button>
+                        <Link to='/listings'><button>Shop Now</button></Link>
                     </div>
                     <img className="slider-img" src={window.placeholderUrl} alt="img" />
                 </div>

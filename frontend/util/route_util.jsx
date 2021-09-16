@@ -16,16 +16,24 @@ const Protected = ({ component: Component, path, loggedIn, exact }) => (
   <Route path={path} exact={exact} render={(props) => (
      loggedIn ? (
       <Component {...props} />
-    ) : (
+    ) :  
+    // (() => this.props.openModal('start-signup'))
+    (
       <Redirect to="/" />
     )
+
+
   )} />
 );
 
-const mapStateToProps = state => (
+const mSTP = state => (
   {loggedIn: Boolean(state.session.id)}
 );
 
-export const AuthRoute = withRouter(connect(mapStateToProps)(Auth));
+const mDTP = dispatch => ({
+    openModal: modal => dispatch(openModal(modal))
+})
 
-export const ProtectedRoute = withRouter(connect(mapStateToProps)(Protected));
+export const AuthRoute = withRouter(connect(mSTP, mDTP)(Auth));
+
+export const ProtectedRoute = withRouter(connect(mSTP, mDTP)(Protected));

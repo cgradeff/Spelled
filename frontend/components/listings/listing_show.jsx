@@ -1,77 +1,113 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { fetchUser } from '../../util/user_api_util';
+
+//fix listing user
 
 class ListingShow extends React.Component {
   constructor(props) {
     super(props)
+    this.onClick = this.onClick.bind(this);
+    this.navToShow = this.navToShow.bind(this);
   }
 
   componentDidMount() {
     this.props.requestListing(this.props.match.params.listingId)
   }
 
+  navToShow() {
+    const url = `/users/${this.props.listing.author_id}`
+    this.props.history.push(url);
+  }
+
+  onClick(e) {
+    e.preventDefault();
+    this.props.deleteListing(this.props.listing.id)
+    this.navToShow();
+  }
+
   render() {
-    const { listing, deleteListing } = this.props
+    const { listing } = this.props
 
     if (listing == undefined || listing.names == undefined) {
       return null
     }
+    // const user = this.props.fetchUser(this.props.listing.author_id)
     
     return (
       <div className="listing-show">
         <img className="show-page-image" src={listing.photoUrl} alt="" />
-
-        <ul className='listing-show-types'>
-          {listing.names.map (val => 
-            <li key={val.name}>
-              {val.name}
-            </li>)
-          }
-        </ul>
-
-        <ul className='listing-show-colors'>
-          {listing.colors.map (val => 
-            <li key={val.color}>
-              {val.color}
-            </li>)
-          }
-        </ul>
+        
 
         <div className="listing-show-text">
           <h1 className="listing-show-title">{this.props.listing.title}</h1>
-          <div className="listing-show-description">
-            {this.props.listing.body}
+          <br />
+
+          <div className='listing-show-list'>
+            <div>Types:</div>
+              {listing.names.map (val => 
+                <div key={val.name}>
+                  {val.name}
+                </div>)
+              }
           </div>
-          <div className="listing-show-price">{this.props.listing.price}</div>
-          <div className="listing-show-condition">
-            {this.props.listing.condition}
+          <br />
+
+          <div className='listing-show-list'>
+            <div>Colors:</div> 
+              {listing.colors.map (val => 
+                <div key={val.color}>
+                  {val.color}
+                </div>)
+              }
           </div>
-          <div className="listing-show-rarity">{this.props.listing.rarity}</div>
-          <div className="listing-show-mana">{this.props.listing.mana}</div>
-          <div className="listing-show-offer">{this.props.listing.offer}</div>
-          <div className="listing-show-sold">{this.props.listing.sold}</div>
+          <br />
+
+          <div className="listing-show-rarity">Rarity: {this.props.listing.rarity}</div>
+          <br />
+          <div className="listing-show-mana">Mana Cost: {this.props.listing.mana}</div>
+          <br />
+          <div className="listing-show-condition">Condition: {this.props.listing.condition}</div>
+          <br />
+
+          <div className='listing-show-price'>
+            <p>$</p>
+            <p>{this.props.listing.price}</p>
+          </div>
+          <br />
+          
+          
           <div className="listing-show-user">
-            {this.props.listing.author_id}
+            {/* {user.username} */}
           </div>
 
-          <div>
+          
             {this.props.currentUser == undefined ||
             this.props.currentUser.id != this.props.listing.author_id ? (
               <div className="list-show-buttons">
-                <button>Purchase</button>
+                <br />
+                <button id='purchase'>Purchase</button>
+                <br />
                 <button>Offer</button>
+                <br />
                 <button>Message</button>
               </div>
             ) : (
               <div className="list-show-buttons">
                 <div className="link-button">
-                  <Link to={`/listings/${listing.id}/edit`}>Edit</Link>
+                  <Link to={`/listings/${listing.id}/edit`} className="edit">Edit</Link>
                 </div>
-                <Link to={`/users/${this.props.currentUser.id}`}><button onClick={() => deleteListing(listing.id)}>
+                <br />
+                  <button onClick={this.onClick}> 
                   Delete
-                </button></Link>
+                </button>
               </div>
             )}
+          
+
+          <div className="listing-show-description">
+            <h4>Description</h4>
+            <div>{this.props.listing.body}</div>
           </div>
         </div>
       </div>

@@ -4,7 +4,6 @@ import { Redirect } from 'react-router-dom';
 class Sell extends React.Component {
     constructor(props) {
         super(props);
-        // this.state = this.props.listing;
         this.state = {
             title: '',
             mana: '',
@@ -17,10 +16,14 @@ class Sell extends React.Component {
             author_id: this.props.currentUser.id,
             photoFile: null,
             photoUrl: null
-            // photo: {imageFile: null, imageUrl: null}
         },
         this.handleSubmit = this.handleSubmit.bind(this);
-        // this.update = this.update.bind(this);
+        this.navToShow = this.navToShow.bind(this);
+    }
+    
+    navToShow() {
+        const url = `/users/${this.props.currentUser.id}`
+        this.props.history.push(url);
     }
 
     handleSubmit(e) {
@@ -39,13 +42,11 @@ class Sell extends React.Component {
             formData.append('listing[photo]', this.state.photoFile);
         };
         this.props.submitListing(formData)
-        // .then(this.setState({ body: "" }))
-
-        // this.props.submitListing(this.state)
+        this.navToShow();
     }
 
     update(field) {
-       return e => this.setState({[field]: e.currentTarget.value}); // {listing: { ...this.state.listing, [field]: e.currentTarget.value}}
+       return e => this.setState({[field]: e.currentTarget.value}); 
     }
 
     handleFile(e) {
@@ -57,15 +58,15 @@ class Sell extends React.Component {
         if (file) {
             fileReader.readAsDataURL(file);
         };
-        // this.setState({ ...this.state,  photoFile: e.currentTarget.files[0]})
     }
 
     render() {
-        // console.log(this.state);
+        
         const preview = this.state.photoUrl ? <img src={this.state.photoUrl} /> : null;
+
         return (
             <div className='sell'>
-                <h2>{this.props.formType}</h2>
+                <h2>Add a new listing</h2>
                 <form onSubmit={this.handleSubmit}>
                     Title
                     <input type="text" value={this.state.title} onChange={this.update('title')}/>
@@ -88,14 +89,11 @@ class Sell extends React.Component {
                     Offer 
                     <input type="offer" value={this.state.offer} onChange={this.update('offer')}/>
                     <br />
-                    {/* <input type="sold" value={this.state.sold} onChange={this.update('sold')}/> */}
-                    {/* <input type="author_id" value={this.state.author_id} onChange={this.update('author_id')}/> */}
                     <input type="file" onChange={this.handleFile.bind(this)}/>
                     <div>
                         {preview}
                     </div>
-                        {/* value={this.state.listing.photoURL} */}
-                    <button type='submit' value={this.props.formType}>Publish</button>
+                    <button type='submit'>Publish</button>
                 </form>
             </div>
         )
