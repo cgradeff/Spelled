@@ -29,14 +29,14 @@ class UserSettings extends React.Component {
     const signedIn = () => {
       return (
         <div
-          className="user-settings-options"
+          className="user-settings-loggedin user-icon"
           onMouseEnter={this.onHover}
           onMouseLeave={this.onHover}
         >
-          <div className="user-icon"><Link to={`/users/${this.props.currentUser.id}`}><FontAwesomeIcon icon={['fas', 'user-circle']} /></Link></div>
+          <Link to={`/users/${this.props.currentUser.id}`}><FontAwesomeIcon icon={['fas', 'user-circle']} id='icon'/></Link>
           {this.state.open && (
             <ul className="logged-in" onClick={(e) => e.stopPropagation()}>
-                <li className='menu-item'>MY ITEMS</li>
+                <Link to={`/users/${this.props.currentUser.id}`} id='linked'><li className='menu-item'>MY ITEMS</li></Link>
                 <li className='menu-item'>
                   <button className="user-settings-button" onClick={this.onClick}>
                     LOGOUT

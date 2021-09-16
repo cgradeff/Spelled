@@ -45,6 +45,11 @@
   justify-content: space-between;
 }
 
+.user-settings-loggedin {
+  // padding-right: 30px;
+  font-size: 12px;
+}
+
 .user-settings-button {
   width: 70px;
   height: 30px;
@@ -56,10 +61,10 @@
 
 .logged-in {
   background-color: white;
-  border-bottom: 1px solid;
-  border-left: 1px solid;
-  border-right: 1px solid;
-  border-color: rgb(221, 221, 221);
+  // border-bottom: 1px solid;
+  // border-left: 1px solid;
+  // border-right: 1px solid;
+  border: 1px solid rgb(221, 221, 221);
   width: auto;
   height: auto;
   display: flexbox;
@@ -69,16 +74,27 @@
   padding-bottom: 13px;
   color: black;
   position: relative;
-  top: 30px;
+  top: 55px;
   margin-top: 46px;
   list-style: none;
   min-width: 5rem;
 }
 
+#icon {
+  color: rgb(221, 221, 221);
+  font-size: 36px;
+}
+
 .user-icon {
-  background-color: burlywood;
-  color: black;
+
+  // background-color: burlywood;
+  color: rgb(221, 221, 221);
   font-size: 18px;
+
+}
+
+#linked {
+  text-decoration: none;
 }
 
 // auth buttons
@@ -124,6 +140,7 @@
 .shop-link {
   color: black;
   text-decoration: none;
+  font-weight: 530;
 }
 
 .shop-link:hover {

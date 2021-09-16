@@ -3,7 +3,6 @@ import { requestListings, deleteListing } from '../../actions/listing_actions';
 import Shop from './shop';
 
 const mSTP = state => {
-    // console.log('ugh', state);
     return {
         listings: Object.values(state.entities.listings)
     }
