@@ -73,9 +73,8 @@
   padding-top: 13px;
   padding-bottom: 13px;
   color: black;
-  position: relative;
-  top: 55px;
-  margin-top: 46px;
+  position: absolute;
+  top: 56px;
   list-style: none;
   min-width: 5rem;
 }
@@ -86,11 +85,9 @@
 }
 
 .user-icon {
-
   // background-color: burlywood;
   color: rgb(221, 221, 221);
   font-size: 18px;
-
 }
 
 #linked {
