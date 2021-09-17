@@ -17,7 +17,7 @@
 
 ## Features
 
-#### Modals
+### Modals
 
 Similar to Grailed, Spelled uses modals for both the login and signup functionality. 
 
@@ -36,7 +36,7 @@ const ModalReducer = (state = startState, action) => {
 }
 ```
 
-#### Photo Upload
+### Photo Upload
 
 When logged in users create a listings, they have the ability to upload a photo to their listing. 
 
