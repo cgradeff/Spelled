@@ -1,8 +1,7 @@
 import React from 'react'
 import { withRouter } from 'react-router'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Link } from 'react-router-dom';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Link } from 'react-router-dom'
 
 class UserSettings extends React.Component {
   constructor(props) {
@@ -17,38 +16,49 @@ class UserSettings extends React.Component {
   onClick(e) {
     e.preventDefault()
     this.props.logout()
-    // this.props.history.push('/');
   }
 
   onHover(e) {
-    const newState = !this.state.open
-    this.setState({ open: newState })
+    this.setState({ open: true })
+  }
+
+  onLeave(e) {
+    console.log('hey')
+    this.setState({ open: false })
   }
 
   render() {
-    const signedIn = () => {
+    const loggedIn = () => {
       return (
         <div
           className="user-settings-loggedin user-icon"
           onMouseEnter={this.onHover}
-          onMouseLeave={this.onHover}
+          onMouseLeave={this.onLeave}
         >
-          <Link to={`/users/${this.props.currentUser.id}`}><FontAwesomeIcon icon={['fas', 'user-circle']} id='icon'/></Link>
+          <Link to={`/users/${this.props.currentUser.id}`}>
+            <FontAwesomeIcon icon={['fas', 'user-circle']} id="icon" />
+          </Link>
           {this.state.open && (
-            <ul className="logged-in" onClick={(e) => e.stopPropagation()}>
-                <Link to={`/users/${this.props.currentUser.id}`} id='linked'><li className='menu-item'>MY ITEMS</li></Link>
-                <li className='menu-item'>
-                  <button className="user-settings-button" onClick={this.onClick}>
-                    LOGOUT
-                  </button>
-                </li>
+            <ul
+              // onMouseLeave={this.onLeave}
+              className="logged-in"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <Link to={`/users/${this.props.currentUser.id}`} id="linked">
+                <li className="menu-item">MY ITEMS</li>
+              </Link>
+              <li className="menu-item">
+                <button className="user-settings-button" onClick={this.onClick}>
+                  LOGOUT
+                </button>
+              </li>
             </ul>
           )}
         </div>
       )
     }
 
-    const noUser = () => {
+    const signedOut = () => {
       return (
         <div>
           <div className="user-settings-options">
@@ -71,8 +81,8 @@ class UserSettings extends React.Component {
       )
     }
 
-    return this.props.currentUser ? signedIn() : noUser()
+    return this.props.currentUser ? loggedIn() : signedOut()
   }
 }
 
-export default withRouter(UserSettings);
+export default withRouter(UserSettings)

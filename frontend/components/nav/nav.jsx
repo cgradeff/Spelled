@@ -10,9 +10,12 @@ class NavHeader extends React.Component {
     }
 
     handleClick(e) {
-        
-        e.preventDefault()
-        // this.props.history.push('/')
+        e.preventDefault();
+        if (!this.props.currentUser) {
+            this.props.openModal('start-login')
+        } else {
+            this.props.history.push('/sell')
+        }
     }
 
     render() {
@@ -30,10 +33,7 @@ class NavHeader extends React.Component {
                         <Link to='/listings' className='shop-link'>
                             <div >SHOP</div>
                         </Link>
-                        <Link to='/sell' className='shop-link'>
-                           <div>SELL</div> 
-                        </Link>
-                        
+                        <button className='sell-link' onClick={this.handleClick}>SELL</button>
                     </div>
                     <UserSettings />
                 </div>

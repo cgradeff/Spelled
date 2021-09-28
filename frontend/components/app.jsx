@@ -1,7 +1,7 @@
 import React from "react";
 import {Route, Switch, Link, Redirect, HashRouter} from 'react-router-dom'
 import ModalContainer from './modal/modal_container';
-import Nav from './nav/nav';
+import NavHeaderContainer from './nav/nav_container';
 import Footer from './footer/footer';
 import CatBar from './cat_bar/cat_bar';
 import Home from './home/home';
@@ -21,7 +21,7 @@ library.add(fab, faChevronRight, faChevronLeft, faSearch, faUserCircle);
 const App = () => (
   <div>
     <div className='header'>
-      <Nav />
+      <NavHeaderContainer />
     </div>
 
     <div className='body'>

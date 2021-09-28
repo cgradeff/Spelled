@@ -88,6 +88,7 @@
   // background-color: burlywood;
   color: rgb(221, 221, 221);
   font-size: 18px;
+  // margin: 5rem;
 }
 
 #linked {
@@ -141,6 +142,18 @@
 }
 
 .shop-link:hover {
+  color: blue;
+}
+
+.sell-link {
+  color: black;
+  text-decoration: none;
+  font-weight: 530;
+  border: none;
+  background-color: transparent;
+}
+
+.sell-link:hover {
   color: blue;
 }
 
