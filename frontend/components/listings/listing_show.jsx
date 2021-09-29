@@ -1,18 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { fetchUser } from '../../util/user_api_util';
+// import { fetchUser } from '../../util/user_api_util';
+import CommentIndexContainer from '../comments/comment_index_container';
 
 //fix listing user
 
 class ListingShow extends React.Component {
   constructor(props) {
     super(props)
+    
     this.onClick = this.onClick.bind(this);
     this.navToShow = this.navToShow.bind(this);
   }
 
   componentDidMount() {
     this.props.requestListing(this.props.match.params.listingId)
+    this.props.fetchComments(this.props.match.params.listingId)
   }
 
   navToShow() {
@@ -29,7 +32,7 @@ class ListingShow extends React.Component {
   render() {
     const { listing } = this.props
 
-    if (listing == undefined || listing.names == undefined) {
+    if (listing == undefined || listing.names == undefined)  {
       return null
     }
     // const user = this.props.fetchUser(this.props.listing.author_id)
@@ -110,6 +113,7 @@ class ListingShow extends React.Component {
             <div>{this.props.listing.body}</div>
           </div>
         </div>
+        <CommentIndexContainer listId={listing.id}/>
       </div>
     )
   }

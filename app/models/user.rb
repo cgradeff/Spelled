@@ -10,6 +10,11 @@ class User < ApplicationRecord
         foreign_key: :author_id,
         class_name: :Listing
 
+    has_many :comments,
+        primary_key: :id,
+        foreign_key: :author_id,
+        class_name: :Comment
+
 
     after_initialize :ensure_session_token
 

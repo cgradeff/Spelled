@@ -14,6 +14,7 @@ User.destroy_all
 Listing.destroy_all
 Color.destroy_all
 Type.destroy_all
+Comment.destroy_all
 # ColorsListing.destroy_all
 # ListingsType.destroy_all
 
@@ -119,6 +120,18 @@ list1_color = ColorsListing.create!(
 list1_type = ListingsType.create!(
     listing_id: list1.id,
     type_id: creature.id
+)
+
+comment1 = Comment.create!(
+    author_id: user2.id,
+    list_id: list1.id,
+    body: 'love this card!!'
+)
+
+comment2 = Comment.create!(
+    author_id: user3.id,
+    list_id: list1.id,
+    body: 'sickkkkkk'
 )
 
 list2 = Listing.create!(

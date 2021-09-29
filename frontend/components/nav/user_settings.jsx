@@ -23,7 +23,7 @@ class UserSettings extends React.Component {
   }
 
   onLeave(e) {
-    console.log('hey')
+    // console.log('hey')
     this.setState({ open: false })
   }
 

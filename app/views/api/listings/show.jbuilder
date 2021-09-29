@@ -10,5 +10,9 @@ json.colors do
     json.array! @listing.colors, :color
 end
 
+json.comments do 
+    json.array! @listing.comments, :body
+end
+
 # json.picture_url listing.picture_url || url_for(listing.photo)
 json.photoUrl url_for(@listing.photo) if @listing.photo.attached?

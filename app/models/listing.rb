@@ -16,6 +16,12 @@ class Listing < ApplicationRecord
 
   has_many :types,
     through: :list_types 
+  
+  # for comments
+  has_many :comments,
+    primary_key: :id,
+    foreign_key: :list_id,
+    class_name: :Comment
 
   # for colors 
   has_many :list_colors, 
