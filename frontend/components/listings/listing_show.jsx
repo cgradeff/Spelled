@@ -113,7 +113,7 @@ class ListingShow extends React.Component {
             <div>{this.props.listing.body}</div>
           </div>
         </div>
-        <CommentIndexContainer listId={listing.id}/>
+        <CommentIndexContainer className='comment-container' listId={listing.id}/>
       </div>
     )
   }

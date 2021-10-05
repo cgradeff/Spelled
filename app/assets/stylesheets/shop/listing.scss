@@ -5,6 +5,7 @@
     width: 100%;
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     margin-bottom: 200px;
     margin-top: 60px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
@@ -95,3 +96,142 @@
 .listing-show-description div{
     line-height: 25px;
 }
+
+// comments
+
+.comments {
+    // background-color: turquoise;
+    width: 100%;
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+.comments-list {
+    background-color: #fafafa;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5em;
+}
+
+.comments div h3 {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    font-size: 16px;
+    font-weight: 550;
+}
+
+.comments div form p  {
+    font-size: 12px;
+    font-weight: 550;
+    color: #6e6e6e;
+}
+
+.add-comment {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.comments form {
+    width: 100%;
+    display: flex;
+    // justify-content: center;
+    flex-wrap: wrap;
+    margin-left: 1em;
+    // margin-right: 5em;
+    // padding-left: 5em;
+}
+
+.comments form div {
+    width: 100%;
+    display: flex;
+    // justify-content: center;
+}
+
+.comments input {
+    width: 100%;
+    height: 3em;
+    border: 1px solid #dddddd;
+    border-radius: 2px;
+    padding-left: 1em;
+    font-size: 14px;
+}
+
+.comments input:focus {
+    outline: none;
+}
+
+.comment-input-container {
+    display: flex;
+    width: 80%;
+    align-items: flex-end;
+}
+
+#comment-icon {
+    font-size: 60px;
+    color: #dddddd;
+}
+
+.comments form button {
+    width: 25em;
+    font-size: 12px;
+    font-weight: 600;
+    background-color: transparent;
+    border: 1px solid #dddddd;
+    margin-left: 1em;
+    border-radius: 2px;
+}
+
+.comments form button:hover {
+    border-color: black;
+    background-color: #f8f8f8;
+}
+
+// comment list
+
+.comments-list-container {
+    width: 55%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.comments-show {
+    // background-color: blue;
+    width: 100%;
+    margin-top: 2em;
+    border-bottom: 1px solid #acacac;
+    padding-bottom: 1em;
+}
+
+.comments-show h4 {
+    font-size: 18px;
+    font-weight: 550;
+    line-height: .5em;
+}
+
+.comment-body {
+    font-size: 16px;
+    line-height: .5em;
+}
+
+.comment-top {
+    display: flex;
+    justify-content: space-between;
+    height: 2.5em;
+}
+
+.comments-show button {
+    border: none;
+    color: rgb(216, 22, 22);
+    font-weight: 600;
+    font-size: 12px;
+    background-color: transparent;
+}
+

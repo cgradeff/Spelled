@@ -7,8 +7,7 @@
   bottom: 0;
   width: 100%;
   //   height: 70px;
-  border-top: 1px solid;
-  border-color: rgb(221, 221, 221);
+  border-top: 1px solid rgb(221, 221, 221);
   color: black;
   background-color: white;
   letter-spacing: normal;
@@ -16,13 +15,18 @@
 
 .foot-links {
   display: flex;
-  width: 800px;
+  width: 25%;
   justify-content: space-between;
   align-items: center;
   padding-left: 30px;
   font-size: 11.5px;
   height: 80px;
   font-weight: 500;
+}
+
+.foot-links a {
+  text-decoration: none;
+  color: black;
 }
 
 .foot-icons {
@@ -34,7 +38,7 @@
   justify-content: space-around;
   // padding-right: 30px;
   height: 20px;
-  width: 180px;
+  width: 18%;
   height: 80px;
   padding-right: 15px;
 }

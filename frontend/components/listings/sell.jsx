@@ -15,7 +15,9 @@ class Sell extends React.Component {
             sold: 'false',
             author_id: this.props.currentUser.id,
             photoFile: null,
-            photoUrl: null
+            photoUrl: null,
+            names: [],
+            colors: []
         },
         this.handleSubmit = this.handleSubmit.bind(this);
         this.navToShow = this.navToShow.bind(this);
@@ -23,6 +25,7 @@ class Sell extends React.Component {
     
     navToShow() {
         const url = `/users/${this.props.currentUser.id}`
+        // const url = '/listings'
         this.props.history.push(url);
     }
 
@@ -38,16 +41,19 @@ class Sell extends React.Component {
         formData.append('listing[offer]', this.state.offer);
         formData.append('listing[sold]', this.state.sold);
         formData.append('listing[author_id]', this.state.author_id);
+        formData.append('listing[colors]', this.state.colors)
         if (this.state.photoFile) {
             formData.append('listing[photo]', this.state.photoFile);
         };
         this.props.submitListing(formData)
-        this.navToShow();
+        .then(this.navToShow());
     }
 
     update(field) {
        return e => this.setState({[field]: e.currentTarget.value}); 
     }
+
+    
 
     handleFile(e) {
         const file = e.currentTarget.files[0];

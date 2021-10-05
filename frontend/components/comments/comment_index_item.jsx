@@ -20,10 +20,12 @@ class CommentIndexItem extends React.Component {
 
     return (
       <div className="comments-show">
-            <p>{this.props.comment.username}</p>
-            <p>{this.props.comment.body}</p>
-            {this.props.comment.author_id === this.props.currentUserId ? 
-            <button onClick={this.handleDelete}>DELETE</button> : null}
+        <div className='comment-top'>
+          <h4>{this.props.comment.username}</h4>
+          {this.props.comment.author_id === this.props.currentUserId ? 
+            <button onClick={this.handleDelete}>Delete</button> : null}
+        </div>
+            <p className='comment-body'>{this.props.comment.body}</p>
       </div>
     )
   }

@@ -1,5 +1,6 @@
-import React from 'react'
-import CommentIndexItem from './comment_index_item'
+import React from 'react';
+import CommentIndexItem from './comment_index_item';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 class CommentIndex extends React.Component {
   constructor(props) {
@@ -9,7 +10,6 @@ class CommentIndex extends React.Component {
       author_id: this.props.currentUserId,
       list_id: this.props.listId,
     }
-    // this.comments = this.props.fetchComments(this.props.listId);
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
@@ -53,30 +53,43 @@ class CommentIndex extends React.Component {
         //     </div>
         //   )
         return (
-          <CommentIndexItem
-            key={i}
-            comment={comment}
-            deleteComment={this.props.deleteComment}
-            fetchComment={this.props.fetchComment}
-            listId={this.props.listId}
-            currentUserId={this.props.currentUserId}
-          />
+            <CommentIndexItem
+              key={i}
+              comment={comment}
+              deleteComment={this.props.deleteComment}
+              fetchComment={this.props.fetchComment}
+              listId={this.props.listId}
+              currentUserId={this.props.currentUserId}
+            />
+          
         )
       })
 
     return (
       <div className="comments">
-        <h3>Discussion</h3>
-        <form>
-          <p>Add a comment</p>
-          <input
-            type="text"
-            value={this.state.body}
-            onChange={this.update('body')}
-          />
-          <button onClick={this.handleSubmit}>COMMENT</button>
-        </form>
-        <div className="comments-list">{listComments}</div>
+        
+        <div className='add-comment' >
+          <h3>Discussion</h3>
+
+          <div className='comment-input-container'>
+            <FontAwesomeIcon icon={['fas', 'user-circle']} id="comment-icon" />
+            <form>
+              <p>Add a comment</p>
+              <div>
+                <input
+                  type="text"
+                  value={this.state.body}
+                  onChange={this.update('body')}
+                />
+                <button onClick={this.handleSubmit}>COMMENT</button>
+              </div>
+              
+            </form>
+          </div>
+          
+        </div>
+        
+        <div className="comments-list"><div className='comments-list-container'>{listComments}</div></div>
       </div>
     )
   }
