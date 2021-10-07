@@ -4,7 +4,6 @@ import CatPage from './cat_page';
 import { withRouter } from 'react-router-dom'
 
 const mSTP = (state, ownProps) => {
-    // console.log(ownProps.match.params)
     return {
         listings: Object.values(state.entities.listings),
         title: ownProps.match.params.title,

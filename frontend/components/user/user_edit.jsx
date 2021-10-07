@@ -15,6 +15,7 @@ class EditUser extends React.Component {
     }
     this.update = this.update.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
+    this.onClick = this.onClick.bind(this)
   }
 
   componentDidMount() {
@@ -23,6 +24,12 @@ class EditUser extends React.Component {
 
   update(field) {
     return (e) => this.setState({ [field]: e.currentTarget.value })
+  }
+
+  onClick(e) {
+    e.preventDefault()
+    this.props.logout()
+    this.props.history.push('/')
   }
 
   handleSubmit(e) {

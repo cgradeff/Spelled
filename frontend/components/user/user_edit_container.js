@@ -4,10 +4,11 @@ import EditUser from './user_edit';
 import { withRouter } from 'react-router';
 import {logout} from '../../actions/session_actions';
 
-const mSTP = (state) => {
+const mSTP = (state, ownProps) => {
   return {
     currentUserId: state.session.id,
     user: Object.values(state.entities.users)[0],
+    history: ownProps.history,
   }
 }
 
