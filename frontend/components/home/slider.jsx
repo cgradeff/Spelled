@@ -14,8 +14,8 @@ class Slider extends React.Component {
                 <div className='slider-content'>
                     <div className='slider-text'>
                         <div>
-                            <p className='slider-p'>THIS IS PLACEHOLDER TEXT</p>
-                            <h2 className='slider-title'>Placeholder Here</h2>
+                            <p className='slider-p'>CURATED COLLECTIONS</p>
+                            <h2 className='slider-title'>The best of MGT</h2>
                         </div>
                         <Link to='/listings'><button>Shop Now</button></Link>
                     </div>

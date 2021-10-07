@@ -31,11 +31,16 @@ class CatPage extends React.Component {
           }
       }
     })
+    let cat_title
+    cat[title] === 'mana' ? cat_title = 'mana cost' : cat_title = cat[title]
     return (
       <div className="shop">
         <h2 className="shop-title">Available Listings</h2>
         {filter_listings.length === 0 ? (
-          <h3>There are no listings for your search</h3>
+          <div className='no-listings'>
+            <h3>There are no availible listings with a {cat_title} of {item}</h3>
+          </div>
+          
         ) : (
           <ul className="shop-list">
             {filter_listings.map((listing, i) => (

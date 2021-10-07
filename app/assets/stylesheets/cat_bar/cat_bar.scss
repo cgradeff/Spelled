@@ -89,4 +89,18 @@
   min-width: 5rem;
 }
 
+.no-listings {
+  display: flex;
+  justify-content: center;
+  height: 54vh;
+  align-items: center;
+}
+
+.no-listings h3 {
+  font-weight: 400;
+  font-size: 14px;
+  color:rgb(177, 177, 177);
+
+}
+
 

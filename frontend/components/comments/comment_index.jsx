@@ -1,6 +1,6 @@
-import React from 'react';
-import CommentIndexItem from './comment_index_item';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React from 'react'
+import CommentIndexItem from './comment_index_item'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 class CommentIndex extends React.Component {
   constructor(props) {
@@ -31,9 +31,8 @@ class CommentIndex extends React.Component {
   }
 
   render() {
-    if (!this.props.comments) return null
 
-    const listComments = this.props.comments
+    let listComments = this.props.comments
       .slice()
       .reverse()
       .map((comment, i) => {
@@ -53,25 +52,27 @@ class CommentIndex extends React.Component {
         //     </div>
         //   )
         return (
-            <CommentIndexItem
-              key={i}
-              comment={comment}
-              deleteComment={this.props.deleteComment}
-              fetchComment={this.props.fetchComment}
-              listId={this.props.listId}
-              currentUserId={this.props.currentUserId}
-            />
-          
+          <CommentIndexItem
+            key={i}
+            comment={comment}
+            deleteComment={this.props.deleteComment}
+            fetchComment={this.props.fetchComment}
+            listId={this.props.listId}
+            currentUserId={this.props.currentUserId}
+          />
         )
       })
 
+    if (this.props.comments.length === 0) {
+      listComments = null
+    }
+
     return (
       <div className="comments">
-        
-        <div className='add-comment' >
+        <div className="add-comment">
           <h3>Discussion</h3>
 
-          <div className='comment-input-container'>
+          <div className="comment-input-container">
             <FontAwesomeIcon icon={['fas', 'user-circle']} id="comment-icon" />
             <form>
               <p>Add a comment</p>
@@ -83,13 +84,13 @@ class CommentIndex extends React.Component {
                 />
                 <button onClick={this.handleSubmit}>COMMENT</button>
               </div>
-              
             </form>
           </div>
-          
         </div>
-        
-        <div className="comments-list"><div className='comments-list-container'>{listComments}</div></div>
+
+        <div className="comments-list">
+          <div className="comments-list-container">{listComments}</div>
+        </div>
       </div>
     )
   }

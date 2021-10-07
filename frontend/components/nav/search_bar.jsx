@@ -15,7 +15,7 @@ class SearchBar extends React.Component {
                     <button className='search-icon'><FontAwesomeIcon icon={['fas', 'search']} /></button>
                     <input className="search-input"
                             type="text"
-                            placeholder="Search" />
+                            placeholder="Search by card name" />
                     <button className='search-button'>Search</button>
                 </form>
             </div>

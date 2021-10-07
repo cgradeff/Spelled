@@ -31,21 +31,30 @@
     margin-left: 60px;
 }
 
+.type-trends-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
 .type-trends {
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: 100%;
+    justify-content: space-around;
+    width: 95%;
     color: black;
+    // padding-left: 2em;
+    // padding-right: 2em;
 }
 
 .type-box img {
-    width: 160px;
+    max-width: 15em;
 }
 
 .type-box {
-    padding-left: 8px;
-    padding-right: 8px;
+    // padding-left: 8px;
+    // padding-right: 8px;
     text-align: center;
     font-size: 14px;
     font-weight: 550;
