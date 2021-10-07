@@ -5,7 +5,7 @@ import { requestListings, deleteListing, requestListing } from '../../actions/li
 import MyListings from './my_listings'
 
 const mSTP = state => {
-  // console.log(state.entities.users[state.session.id].listings)
+  
   return {
     currentUser: state.entities.users[state.session.id],
     listings: Object.values(state.entities.listings)

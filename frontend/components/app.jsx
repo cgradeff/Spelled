@@ -1,5 +1,5 @@
 import React from "react";
-import {Route, Switch, Link, Redirect, HashRouter} from 'react-router-dom'
+import {Route, Switch, Redirect} from 'react-router-dom'
 import ModalContainer from './modal/modal_container';
 import NavHeaderContainer from './nav/nav_container';
 import Footer from './footer/footer';
@@ -10,6 +10,8 @@ import ListingShowContainer from "./listings/listing_show_container";
 import UserContainer from './user/user_container';
 import SellContainer from './listings/sell_container';
 import EditListingContainer from './listings/edit_listing_container';
+import EditUserContainer from './user/user_edit_container';
+import CatPageContainer from './cat_bar/cat_page_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
@@ -31,10 +33,12 @@ const App = () => (
       <Switch>
         <Route exact path='/' component={Home} ></Route>
         <Route exact path='/listings' component={ShopContainer} ></Route>
+        <Route path='/category/:title/:item' component={CatPageContainer}></Route>
         <Route exact path='/listings/:listingId' component={ListingShowContainer} ></Route>
         <ProtectedRoute exact path="/sell" component={SellContainer} />
         <ProtectedRoute exact path="/listings/:listingId/edit" component={EditListingContainer} />
         <ProtectedRoute exact path='/users/:userId' component={UserContainer} ></ProtectedRoute>
+        <ProtectedRoute exact path='/users/:userId/settings' component={EditUserContainer} ></ProtectedRoute>
         <Redirect to="/" />
       </Switch>
     </div>

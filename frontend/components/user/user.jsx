@@ -1,6 +1,7 @@
 import React from 'react'
 import MyListingsContainer from './my_listings_container'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Link } from 'react-router-dom'
 
 class User extends React.Component {
   constructor(props) {
@@ -8,16 +9,8 @@ class User extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchUser(this.props.currentUser.id)
+    this.props.fetchUser(this.props.user.id)
   }
-
-//   componentDidUpdate(prevProps) {
-//     console.log('huh')
-//     if (this.props.listings !== prevProps.listings) {
-//       this.props.fetchUser(this.props.currentUser.id)
-//     }
-//   }
-  
 
   render() {
     const user = this.props.currentUser
@@ -33,8 +26,23 @@ class User extends React.Component {
           </div>
           <p>{user.bio}</p>
         </div>
-
-        <MyListingsContainer />
+        <div className="user-content-container">
+          <ul className="user-options">
+            <Link
+              className="user-options-li"
+              to={`/users/${this.props.currentUser.id}`}
+            >
+              <li>MY ITEMS</li>
+            </Link>
+            <Link
+              className="user-options-li"
+              to={`/users/${this.props.currentUser.id}/settings`}
+            >
+              <li>SETTINGS</li>
+            </Link>
+          </ul>
+          <MyListingsContainer />
+        </div>
       </div>
     )
   }

@@ -1,55 +1,185 @@
 .user {
-    height: fit-content;
-    // background-color: cadetblue;
-    color: black;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+  height: fit-content;
+  // background-color: cadetblue;
+  color: black;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: light;
-    letter-spacing: normal;
-    margin-bottom: 100px;
-    margin-top: 20px;
+  font-weight: light;
+  letter-spacing: normal;
+  margin-bottom: 100px;
+  margin-top: 20px;
 }
 
 .user-info {
-    // background-color: rgb(224, 158, 158);
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 200px;
-    color: rgb(221, 221, 221);
+  // background-color: rgb(224, 158, 158);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 200px;
+  color: rgb(221, 221, 221);
 
-    // padding-left: 50px;
+  // padding-left: 50px;
 }
 .user-info h2 {
-    font-weight: 450;
-    font-size: 19px;
-    color: black;
+  font-weight: 450;
+  font-size: 19px;
+  color: black;
 }
 
 .user-pic {
-    font-size: 70px;
+  font-size: 70px;
 }
 
 .user-top {
-    border-bottom: 1px solid rgb(221, 221, 221);
-    margin-left: 10px;
-    margin-right: 10px;
+  border-bottom: 1px solid rgb(221, 221, 221);
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .user-top p {
-    margin-left: 10px;
-    margin-top: 40px;
-    font-weight: 300;
-    font-size: 14px;
+  margin-left: 10px;
+  margin-top: 40px;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.user-content-container {
+  display: flex;
+  margin-top: 20px;
+}
+
+.user-options {
+  list-style: none;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 450;
+  border-style: none;
+  font-size: 12px;
+}
+
+.user-options li {
+  height: 3.7em;
+}
+
+.user-options-li {
+  text-decoration: none;
+  color: #a3a3a3;
 }
 
 .my-listings {
-    // background-color: rgb(186, 211, 138);
-    margin-top: 30px;
+  // background-color: rgb(186, 211, 138);
+  // margin-top: 30px;
+  margin-left: 5em;
+}
+
+.user-options-li:hover {
+  border-bottom: 1px solid #a3a3a3;
+  color: black;
 }
 
 .my-listings h1 {
-    padding-left: 50px;
-    font-size: 20px;
-    font-weight: 450;
+  padding-left: 50px;
+  font-size: 20px;
+  font-weight: 450;
 }
+
+// edit user
+
+.edit-user {
+  padding-left: 50px;
+  // margin-left: 5em;
+//   background-color: blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+}
+
+.edit-user-div {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.top-row {
+    display: flex;
+    justify-content: center;
+}
+
+.edit-user h1 {
+  font-size: 20px;
+  font-weight: 450;
+}
+
+.edit-user-head {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.edit-email {
+    margin-left: 1.5em;
+}
+
+.edit-user input,  .edit-user textarea {
+    border: 1px solid rgb(221, 221, 221);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    border-radius: 5px;
+    background-color: white;
+    width: 370px;
+    height: 40px;
+    padding-left: 1em;
+}
+
+.edit-user textarea:focus, .edit-user input:focus  {
+    outline: none;
+}
+
+.edit-user textarea {
+    height: 45px;
+    padding-top: .7em;
+    padding-bottom: .7em;
+    line-height: 1.7em;
+}
+
+.edit-user p {
+    font-size: 12px;
+    font-weight: 500;
+    color: #818181;
+}
+
+.edit-signout {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+
+.edit-submit {
+    display: flex;
+    justify-content: center;
+    margin-top: 3em;
+    margin-bottom: .5em;
+}
+
+.edit-user button {
+    background-color: transparent;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 2px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 450;
+    font-size: 12px;
+    height: 4em;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.edit-user button:hover {
+    border-color: black;
+    background-color: rgb(250, 250, 250);
+}
+

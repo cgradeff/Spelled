@@ -1,8 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router';
 
-//fix history stuff
-
 class EditListing extends React.Component {
     constructor(props) {
         super(props);

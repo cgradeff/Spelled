@@ -19,12 +19,9 @@ class UserSettings extends React.Component {
   }
 
   onHover(e) {
-    this.setState({ open: true })
-  }
-
-  onLeave(e) {
-    // console.log('hey')
-    this.setState({ open: false })
+    e.preventDefault()
+    const newState = !this.state.open
+    this.setState({ open: newState })
   }
 
   render() {
@@ -32,26 +29,39 @@ class UserSettings extends React.Component {
       return (
         <div
           className="user-settings-loggedin user-icon"
+          // onMouseEnter={this.onHover}
+          // onMouseLeave={this.onLeave}
           onMouseEnter={this.onHover}
-          onMouseLeave={this.onLeave}
+          onMouseLeave={this.onHover}
         >
-          <Link to={`/users/${this.props.currentUser.id}`}>
-            <FontAwesomeIcon icon={['fas', 'user-circle']} id="icon" />
-          </Link>
+          <div id="user-icon-cont">
+            <Link to={`/users/${this.props.currentUser.id}`}>
+              <FontAwesomeIcon icon={['fas', 'user-circle']} id="icon" />
+            </Link>
+          </div>
           {this.state.open && (
             <ul
               // onMouseLeave={this.onLeave}
               className="logged-in"
               onClick={(e) => e.stopPropagation()}
             >
-              <Link to={`/users/${this.props.currentUser.id}`} id="linked">
+              <Link
+                to={`/users/${this.props.currentUser.id}`}
+                className="linked"
+              >
                 <li className="menu-item">MY ITEMS</li>
               </Link>
-              <li className="menu-item">
+              <Link
+                to={`/users/${this.props.currentUser.id}/settings`}
+                className="linked"
+              >
+                <li className="menu-item">SETTINGS</li>
+              </Link>
+              {/* <li className="menu-item">
                 <button className="user-settings-button" onClick={this.onClick}>
                   LOGOUT
                 </button>
-              </li>
+              </li> */}
             </ul>
           )}
         </div>

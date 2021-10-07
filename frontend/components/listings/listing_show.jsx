@@ -35,8 +35,7 @@ class ListingShow extends React.Component {
     if (listing == undefined || listing.names == undefined)  {
       return null
     }
-    // const user = this.props.fetchUser(this.props.listing.author_id)
-    
+  
     return (
       <div className="listing-show">
         <img className="show-page-image" src={listing.photoUrl} alt="" />
@@ -78,11 +77,6 @@ class ListingShow extends React.Component {
             <p>{this.props.listing.price}</p>
           </div>
           <br />
-          
-          
-          <div className="listing-show-user">
-            {/* {user.username} */}
-          </div>
 
           
             {this.props.currentUser == undefined ||

@@ -1,5 +1,4 @@
 import React from 'react'
-import Dropdown from 'react-bootstrap/Dropdown'
 import MyDropdownMenu from '../dropdown/MyDropdownMenu'
 
 class CatBar extends React.Component {
@@ -21,13 +20,13 @@ class CatBar extends React.Component {
       },
       {
         title: 'RARITY',
-        items: ['BASIC LANDS', 'COMMON', 'UNCOMMON', 'RARE', 'MYTHIC RARE'],
+        items: ['BASIC LAND', 'COMMON', 'UNCOMMON', 'RARE', 'MYTHIC RARE'],
       },
       { title: 'MANA COST', items: ['X', 0, 1, 2, 3, 4, 5, 6, '7+'] },
       {
         title: 'COLOR',
         items: ['RED', 'BLACK', 'BLUE', 'GREEN', 'WHITE', 'MULTI'],
-      },
+      }, 
     ]
   }
 

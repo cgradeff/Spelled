@@ -48,6 +48,7 @@
 .user-settings-loggedin {
   // padding-right: 30px;
   font-size: 12px;
+  // width: 70px;
 }
 
 .user-settings-button {
@@ -61,9 +62,6 @@
 
 .logged-in {
   background-color: white;
-  // border-bottom: 1px solid;
-  // border-left: 1px solid;
-  // border-right: 1px solid;
   border: 1px solid rgb(221, 221, 221);
   width: auto;
   height: auto;
@@ -74,9 +72,15 @@
   padding-bottom: 13px;
   color: black;
   position: absolute;
-  top: 56px;
+  top: 45px;
+  right: 60px;
   list-style: none;
   min-width: 5rem;
+}
+
+#user-icon-cont {
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 
 #icon {
@@ -85,13 +89,11 @@
 }
 
 .user-icon {
-  // background-color: burlywood;
   color: rgb(221, 221, 221);
   font-size: 18px;
-  // margin: 5rem;
 }
 
-#linked {
+.linked {
   text-decoration: none;
 }
 

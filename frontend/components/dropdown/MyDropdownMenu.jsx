@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 class MyDropdown extends React.Component {
   constructor(props) {
@@ -25,8 +26,12 @@ class MyDropdown extends React.Component {
         <div className="cat-title">{this.props.title}</div>
         {this.state.open && (
           <ul className="menu" onClick={(e) => e.stopPropagation()}>
-            {this.props.items.map((item) => (
-              <li className='menu-item' key={item}>{item}</li>
+            {this.props.items.map((item, i) => (
+              <Link to={`/category/${this.props.title}/${item}`} className='menu-item-link' key={i}>
+                <li className="menu-item">
+                  {item}
+                </li>
+              </Link>
             ))}
           </ul>
         )}

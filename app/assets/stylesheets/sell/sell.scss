@@ -16,6 +16,7 @@
 .sell-form input {
     margin-bottom: 30px;
     margin-top: 20px;
+    padding-left: 1em;
     width: 370px;
     height: 35px;
     border: 1px solid rgb(221, 221, 221);
@@ -25,6 +26,10 @@
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 300;
     font-size: 14px;
+}
+
+.sell-form input:focus, .sell-form select:focus,  .sell-form textarea:focus{
+    outline: none;
 }
 
 .sell-title {
@@ -56,8 +61,8 @@
 .sell-form textarea {
     margin-bottom: 30px;
     margin-top: 20px;
-    width: 795px;
-    height: 130px;
+    width: 775px;
+    height: 120px;
     border: 1px solid rgb(117, 117, 117);
     border-radius: 2px;
     background-color: white;
@@ -65,6 +70,8 @@
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 300;
     font-size: 14px;
+    padding-top: 1em;
+    padding-left: 1em;
 }
 
 .sell-preview img{
@@ -84,4 +91,8 @@
     width: 100px;
     height: 50px;
     margin-left: 700px;
+}
+
+.sell-form button:hover {
+    background-color: rgb(44, 44, 44);
 }

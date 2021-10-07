@@ -4,9 +4,10 @@ import { requestListings } from '../../actions/listing_actions';
 import { fetchUser } from '../../actions/user_actions';
 
 const mSTP = (state) => {
+    // console.log(state.entities.users)
     return {
         currentUser: state.entities.users[state.session.id],
-        // listings: state.entities.users[state.session.id].listings
+        user: Object.values(state.entities.users)[0],
     }
   };
 

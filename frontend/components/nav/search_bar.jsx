@@ -1,5 +1,5 @@
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 class SearchBar extends React.Component {
     constructor(props) {
@@ -13,8 +13,8 @@ class SearchBar extends React.Component {
             <div className='search-bar'>
                 <form className='search-form' action="">
                     <button className='search-icon'><FontAwesomeIcon icon={['fas', 'search']} /></button>
-                    <input className="search-input" 
-                            type="text" 
+                    <input className="search-input"
+                            type="text"
                             placeholder="Search" />
                     <button className='search-button'>Search</button>
                 </form>
@@ -23,4 +23,4 @@ class SearchBar extends React.Component {
     }
 }
 
-export default SearchBar;
+export default SearchBar

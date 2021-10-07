@@ -10,7 +10,7 @@ class EditListingForm extends React.Component {
   }
 
   render () {
-    const { listing, formType, submitListing } = this.props;
+    const { listing, submitListing } = this.props;
 
     if (!listing) return null;
     return (
