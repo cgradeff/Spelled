@@ -12,6 +12,7 @@ import SellContainer from './listings/sell_container';
 import EditListingContainer from './listings/edit_listing_container';
 import EditUserContainer from './user/user_edit_container';
 import CatPageContainer from './cat_bar/cat_page_container';
+import SearchResultContainer from './search_results/search_result_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
@@ -33,6 +34,7 @@ const App = () => (
       <Switch>
         <Route exact path='/' component={Home} ></Route>
         <Route exact path='/listings' component={ShopContainer} ></Route>
+        <Route exact path='/shop/:search' component={SearchResultContainer}></Route>
         <Route path='/category/:title/:item' component={CatPageContainer}></Route>
         <Route exact path='/listings/:listingId' component={ListingShowContainer} ></Route>
         <ProtectedRoute exact path="/sell" component={SellContainer} />

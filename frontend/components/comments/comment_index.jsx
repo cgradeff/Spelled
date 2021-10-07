@@ -36,21 +36,6 @@ class CommentIndex extends React.Component {
       .slice()
       .reverse()
       .map((comment, i) => {
-        //   if (comment.author_id === this.props.currentUserId) {
-        //     return (
-        //       <div className="my-comment" key={i}>
-        //         <p>{comment.username}</p>
-        //         <p>{comment.body}</p>
-        //         <button onClick={() => this.props.deleteComment(comment.id, this.props.listId)}>DELETE</button>
-        //       </div>
-        //     )
-        //   }
-        //   return (
-        //     <div key={i}>
-        //       <p>{comment.username}</p>
-        //       <p>{comment.body}</p>
-        //     </div>
-        //   )
         return (
           <CommentIndexItem
             key={i}

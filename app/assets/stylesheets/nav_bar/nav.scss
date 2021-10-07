@@ -173,7 +173,7 @@
   min-width: fit-content;
 }
 
-.search-input:focus {
+.search-input:focus, .search-button:focus  {
   outline: none;
 }
 
@@ -183,7 +183,7 @@
   border: none;
   font-size: 14px;
   font-weight: 300;
-  color: rgb(190, 190, 190);
+  color: black;
 }
 
 .search-icon {
@@ -205,3 +205,5 @@
   font-size: 14px;
   font-weight: 550;
 }
+
+

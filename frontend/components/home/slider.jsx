@@ -15,7 +15,7 @@ class Slider extends React.Component {
                     <div className='slider-text'>
                         <div>
                             <p className='slider-p'>CURATED COLLECTIONS</p>
-                            <h2 className='slider-title'>The best of MGT</h2>
+                            <h2 className='slider-title'>The Best of MGT</h2>
                         </div>
                         <Link to='/listings'><button>Shop Now</button></Link>
                     </div>
