@@ -11,11 +11,12 @@ class SearchResult extends React.Component {
   }
 
   render() {
-      // add filter here
     const { listings, search } = this.props
-    // const cat = this.cat
     const filter_listings = listings.filter((listing) => {
-      return listing.title.toLowerCase().includes(search.toLowerCase())
+    //   return (Object.values(listing).some((item) => {
+    //     item.toString().toLowerCase().includes(search.toString().toLowerCase())
+    //   }))
+        return listing.title.toLowerCase().includes(search.toLowerCase())
     })
 
     return (
@@ -23,18 +24,12 @@ class SearchResult extends React.Component {
         <h2 className="shop-title">Available Listings</h2>
         {filter_listings.length === 0 ? (
           <div className="no-listings">
-            <h3>
-              There are no listings for your search
-            </h3>
+            <h3>There are no listings for your search</h3>
           </div>
         ) : (
           <ul className="shop-list">
             {filter_listings.map((listing, i) => (
-              <ShopItem
-                listing={listing}
-                // deleteListing={deleteListing}
-                key={i}
-              />
+              <ShopItem listing={listing} key={i} />
             ))}
           </ul>
         )}
@@ -44,5 +39,3 @@ class SearchResult extends React.Component {
 }
 
 export default SearchResult
-
-

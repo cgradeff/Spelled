@@ -29,7 +29,6 @@ class SearchBar extends React.Component {
                     <button className='search-icon'><FontAwesomeIcon icon={['fas', 'search']} /></button>
                     <input className="search-input"
                             type="text"
-                            // value={this.state.search}
                             onChange={this.update('search')}
                             placeholder="Search by card name" 
                             />
