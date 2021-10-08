@@ -31,6 +31,7 @@ class Sell extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
+        console.log(this.props.currentUser)
         const formData = new FormData
         formData.append('listing[title]', this.state.title);
         formData.append('listing[mana]', this.state.mana);
@@ -46,7 +47,8 @@ class Sell extends React.Component {
             formData.append('listing[photo]', this.state.photoFile);
         };
         this.props.submitListing(formData)
-        .then(this.navToShow());
+        // this.props.fetchUser(this.props.currentUser.id)
+        this.navToShow();
     }
 
     update(field) {

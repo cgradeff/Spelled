@@ -15,7 +15,8 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  width: 200px;
+  width: 25%;
+  height: 100%;
   color: rgb(221, 221, 221);
 
   // padding-left: 50px;
@@ -29,6 +30,35 @@
 .user-pic {
   font-size: 70px;
 }
+
+.user-list-count {
+  // background-color: burlywood;
+  display: flex;
+  align-items: center;
+  // justify-content: center;
+  flex-wrap: wrap;
+  width: 3em;
+  padding-left: 1em;
+  height: 3em;
+  border-left: 1px solid rgb(206, 206, 206);
+}
+.user-list-count h3 {
+  // background-color: cadetblue;
+  width: fit-content;
+  color: black;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+#user-list-p {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  color: #838383;
+}
+
 
 .user-top {
   border-bottom: 1px solid rgb(221, 221, 221);

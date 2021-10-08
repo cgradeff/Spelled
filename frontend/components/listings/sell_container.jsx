@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import { createListing } from '../../actions/listing_actions';
+import { fetchUser } from '../../util/user_api_util';
 import Sell from './sell';
 
 const mSTP = state => {
@@ -12,6 +13,7 @@ const mSTP = state => {
 const mDTP = dispatch => {
     return {
         submitListing: (listing) => dispatch(createListing(listing)),
+        fetchUser: userId => dispatch(fetchUser(userId)),
     }
 }
 
