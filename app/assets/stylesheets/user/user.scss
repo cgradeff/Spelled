@@ -183,3 +183,15 @@
     background-color: rgb(250, 250, 250);
 }
 
+#edit-submit-button {
+  background-color: black;
+  color: white;
+  border-radius: 2px;
+  border: 1px solid black;
+}
+
+#edit-submit-button:hover {
+  background-color: rgb(39, 39, 39);
+  border-color: rgb(39, 39, 39);
+}
+

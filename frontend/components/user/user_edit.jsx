@@ -120,7 +120,7 @@ class EditUser extends React.Component {
                 </div>
               </form>
               <div className="edit-signout">
-                <button className="user-edit-button" onClick={this.onClick}>
+                <button id='edit-submit-button' onClick={this.onClick}>
                   SIGN OUT
                 </button>
               </div>
