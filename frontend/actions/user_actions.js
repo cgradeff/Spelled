@@ -11,6 +11,5 @@ export const editUser = (user) => (dispatch) =>
   UserApiUtils.editUser(user).then((user) => dispatch(receiveUser(user)))
 
 export const fetchUser = (userId) => (dispatch) =>
-  UserApiUtils.fetchUser(userId).then((user) => {
-    return dispatch(receiveUser(user))
-  })
+  UserApiUtils.fetchUser(userId).then((user) => dispatch(receiveUser(user))
+  )

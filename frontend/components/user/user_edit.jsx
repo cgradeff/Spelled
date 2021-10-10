@@ -15,7 +15,7 @@ class EditUser extends React.Component {
     }
     this.update = this.update.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
-    this.onClick = this.onClick.bind(this)
+    this.handleLogout = this.handleLogout.bind(this)
   }
 
   componentDidMount() {
@@ -26,7 +26,7 @@ class EditUser extends React.Component {
     return (e) => this.setState({ [field]: e.currentTarget.value })
   }
 
-  onClick(e) {
+  handleLogout(e) {
     e.preventDefault()
     this.props.logout()
     this.props.history.push('/')
@@ -128,7 +128,7 @@ class EditUser extends React.Component {
                 </div>
               </form>
               <div className="edit-signout">
-                <button id='edit-submit-button' onClick={this.onClick}>
+                <button id='edit-submit-button' onClick={this.handleLogout}>
                   SIGN OUT
                 </button>
               </div>

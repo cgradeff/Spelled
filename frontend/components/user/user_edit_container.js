@@ -1,8 +1,8 @@
-import { connect } from 'react-redux';
-import { fetchUser, editUser } from '../../actions/user_actions';
-import EditUser from './user_edit';
-import { withRouter } from 'react-router';
-import {logout} from '../../actions/session_actions';
+import { connect } from 'react-redux'
+import { fetchUser, editUser } from '../../actions/user_actions'
+import EditUser from './user_edit'
+import { withRouter } from 'react-router'
+import { logout } from '../../actions/session_actions'
 
 const mSTP = (state, ownProps) => {
   return {
@@ -12,14 +12,14 @@ const mSTP = (state, ownProps) => {
   }
 }
 
-const mDTP = dispatch => {
+const mDTP = (dispatch) => {
   return {
-    fetchUser: userId => dispatch(fetchUser(userId)),
-    editUser: user => dispatch(editUser(user)),
+    fetchUser: (userId) => dispatch(fetchUser(userId)),
+    editUser: (user) => dispatch(editUser(user)),
     logout: () => {
-        dispatch(logout())
-    }
+      dispatch(logout())
+    },
   }
 }
 
-export default withRouter(connect(mSTP, mDTP)(EditUser));
+export default withRouter(connect(mSTP, mDTP)(EditUser))

@@ -22,6 +22,10 @@ class Sell extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         this.navToShow = this.navToShow.bind(this);
     }
+
+    componentDidMount() {
+        this.props.fetchUser(this.props.currentUser.id)
+    }
     
     navToShow() {
         const url = `/users/${this.props.currentUser.id}`
@@ -47,8 +51,8 @@ class Sell extends React.Component {
             formData.append('listing[photo]', this.state.photoFile);
         };
         this.props.submitListing(formData)
-        // this.props.fetchUser(this.props.currentUser.id)
-        this.navToShow();
+        .then(this.props.fetchUser(this.props.currentUser.id))
+        .then(this.navToShow());
     }
 
     update(field) {

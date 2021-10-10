@@ -26,8 +26,8 @@ class ListingShow extends React.Component {
   onClick(e) {
     e.preventDefault();
     this.props.deleteListing(this.props.listing.id)
-    // this.props.fetchUser(this.props.currentUser.id)
-    this.navToShow();
+    .then(this.props.fetchUser(this.props.currentUser.id))
+    .then(this.navToShow());
   }
 
   render() {

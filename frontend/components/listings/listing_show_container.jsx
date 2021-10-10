@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { requestListing,  deleteListing} from '../../actions/listing_actions';
-import { fetchUser } from '../../util/user_api_util';
+import { fetchUser } from '../../actions/user_actions';
 import { fetchComments } from "../../actions/comment_actions";
 
 import ListingShow from './listing_show';
