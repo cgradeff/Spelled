@@ -1,6 +1,5 @@
 import React from 'react'
 import ShopItem from '../listings/shop_item'
-// import { Link } from 'react-router-dom';
 
 class CatPage extends React.Component {
   constructor(props) {

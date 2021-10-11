@@ -92,8 +92,10 @@
 }
 
 .user-options-li {
-  text-decoration: none;
+  border: none;
+  background-color: transparent;
   color: #a3a3a3;
+  padding-bottom: .5em;
 }
 
 .my-listings {
@@ -103,7 +105,8 @@
 }
 
 .user-options-li:hover {
-  border-bottom: 1px solid #a3a3a3;
+  border-bottom: 1px solid black;
+  cursor: pointer;
   color: black;
 }
 

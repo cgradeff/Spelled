@@ -10,7 +10,6 @@ import ListingShowContainer from "./listings/listing_show_container";
 import UserContainer from './user/user_container';
 import SellContainer from './listings/sell_container';
 import EditListingContainer from './listings/edit_listing_container';
-import EditUserContainer from './user/user_edit_container';
 import CatPageContainer from './cat_bar/cat_page_container';
 import SearchResultContainer from './search_results/search_result_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
@@ -40,7 +39,6 @@ const App = () => (
         <ProtectedRoute exact path="/sell" component={SellContainer} />
         <ProtectedRoute exact path="/listings/:listingId/edit" component={EditListingContainer} />
         <ProtectedRoute exact path='/users/:userId' component={UserContainer} ></ProtectedRoute>
-        <ProtectedRoute exact path='/users/:userId/settings' component={EditUserContainer} ></ProtectedRoute>
         <Redirect to="/" />
       </Switch>
     </div>
