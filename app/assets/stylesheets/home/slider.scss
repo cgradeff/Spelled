@@ -38,6 +38,7 @@
         background-color: black;
         color: white;
         border-color: black;
+        cursor: pointer;
     }
 }
 
@@ -55,4 +56,8 @@
 
 .switch {
     color: black;
+}
+
+.switch:hover {
+    cursor: pointer;
 }

@@ -1,15 +1,35 @@
 import React from 'react'
 import MyListingsContainer from './my_listings_container'
+import EditUserContainer from './user_edit_container'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from 'react-router-dom'
 
 class User extends React.Component {
   constructor(props) {
     super(props)
+    this.state = {
+      edit: false
+    }
+    this.handleMyItems = this.handleMyItems.bind(this)
+    this.handleSettings = this.handleSettings.bind(this)
   }
 
   componentDidMount() {
     this.props.fetchUser(this.props.user.id)
+  }
+
+  handleSettings(e) {
+    e.preventDefault()
+    this.setState({
+      edit: true
+    })
+  }
+
+  handleMyItems(e) {
+    e.preventDefault()
+    this.setState({
+      edit: false
+    })
   }
 
   render() {
@@ -36,20 +56,10 @@ class User extends React.Component {
         </div>
         <div className="user-content-container">
           <ul className="user-options">
-            <Link
-              className="user-options-li"
-              to={`/users/${this.props.currentUser.id}`}
-            >
-              <li>MY ITEMS</li>
-            </Link>
-            <Link
-              className="user-options-li"
-              to={`/users/${this.props.currentUser.id}/settings`}
-            >
-              <li>SETTINGS</li>
-            </Link>
+              <li><button className="user-options-li" onClick={this.handleMyItems}>MY ITEMS</button></li>
+              <li><button className="user-options-li" onClick={this.handleSettings}>SETTINGS</button></li>
           </ul>
-          <MyListingsContainer />
+          {!this.state.edit ? <MyListingsContainer /> : <EditUserContainer />}
         </div>
       </div>
     )

@@ -29,8 +29,6 @@ class UserSettings extends React.Component {
       return (
         <div
           className="user-settings-loggedin user-icon"
-          // onMouseEnter={this.onHover}
-          // onMouseLeave={this.onLeave}
           onMouseEnter={this.onHover}
           onMouseLeave={this.onHover}
         >
@@ -41,7 +39,6 @@ class UserSettings extends React.Component {
           </div>
           {this.state.open && (
             <ul
-              // onMouseLeave={this.onLeave}
               className="logged-in"
               onClick={(e) => e.stopPropagation()}
             >
@@ -57,11 +54,6 @@ class UserSettings extends React.Component {
               >
                 <li className="menu-item">SETTINGS</li>
               </Link>
-              {/* <li className="menu-item">
-                <button className="user-settings-button" onClick={this.onClick}>
-                  LOGOUT
-                </button>
-              </li> */}
             </ul>
           )}
         </div>
