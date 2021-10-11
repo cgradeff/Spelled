@@ -21,6 +21,8 @@
 
 Similar to Grailed, Spelled uses modals for both the login and signup functionality. 
 
+![Modals Image](./Readme-images/modal.png)
+
 ```js
 const ModalReducer = (state = startState, action) => {
     Object.freeze(state)
@@ -40,6 +42,8 @@ const ModalReducer = (state = startState, action) => {
 
 When logged in users can create a listing, they have the ability to upload a photo to their listing. Logged in users also have the ability to edit and delete their listings.
 
+![Modals Image](./Readme-images/modal.png)
+
 ```js
 handleFile(e) {
         const file = e.currentTarget.files[0];
@@ -56,9 +60,13 @@ handleFile(e) {
 
 Users have the ability to view all comments on any listing. Logged in users have the ability to add and delete comments on a listing under the 'Discussion' section.
 
+![Comments Image](./Readme-images/comments.png)
+
 ### Search & Categories
 
 Users can use the search bar to find and filter listings by card name. Users can also search by different card categories by use of the dropdown lists in the category bar.
+
+![Search Image](./Readme-images/search.png)
 
 ```js
 
@@ -89,3 +97,7 @@ if (cat[title] === 'mana') {
 ### User Edit & Profile Page
 
 Logged in users can view all of their listings and the number of listings that they have under their user profile page. They are also able to edit their profile through the settings tab via their user profile page.
+
+![Edit User Image](./Readme-images/edit_user.png)
+
+![Prof Image](./Readme-images/user_prof.png)
