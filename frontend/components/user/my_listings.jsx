@@ -11,7 +11,7 @@ class MyListings extends React.Component {
     this.props.requestListings();
   }
 
-  postedListings(){
+  postedListings() {
     let postedListings = this.props.listings.filter((listing) => {
       if (!!listing){
         if (!!listing.author_id){

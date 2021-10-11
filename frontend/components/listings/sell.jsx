@@ -28,7 +28,7 @@ class Sell extends React.Component {
     }
     
     navToShow() {
-        const url = `/users/${this.props.currentUser.id}`
+        const url = `/users/${this.props.currentUser.id}/:listings`
         // const url = '/listings'
         this.props.history.push(url);
     }

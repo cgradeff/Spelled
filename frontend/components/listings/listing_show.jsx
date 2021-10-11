@@ -1,9 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import { fetchUser } from '../../util/user_api_util';
 import CommentIndexContainer from '../comments/comment_index_container';
-
-//fix listing user
 
 class ListingShow extends React.Component {
   constructor(props) {
@@ -19,7 +16,7 @@ class ListingShow extends React.Component {
   }
 
   navToShow() {
-    const url = `/users/${this.props.listing.author_id}`
+    const url = `/users/${this.props.listing.author_id}/:listings`
     this.props.history.push(url);
   }
 
