@@ -36,9 +36,9 @@ const ModalReducer = (state = startState, action) => {
 }
 ```
 
-### Photo Upload
+### Listing CRUD With Photo Upload
 
-When logged in users create a listings, they have the ability to upload a photo to their listing. 
+When logged in users can create a listing, they have the ability to upload a photo to their listing. Logged in users also have the ability to edit and delete their listings.
 
 ```js
 handleFile(e) {
@@ -52,7 +52,40 @@ handleFile(e) {
         };
 }
 ```
+### Comments
 
-## Coming Soon
+Users have the ability to view all comments on any listing. Logged in users have the ability to add and delete comments on a listing under the 'Discussion' section.
 
-Users will be able to search by listing title in the search bar or look through listings of specified categories by way of dropdown lists in the category bar, they will also be able to view user profiles, and view comments left on listing under the 'Discussion' section. Logged in users will also be able to edit and delete their user profile through the settings tab in their user profile page, and they will be able to leave comments on posts.
+### Search & Categories
+
+Users can use the search bar to find and filter listings by card name. Users can also search by different card categories by use of the dropdown lists in the category bar.
+
+```js
+
+const { listings, deleteListing, title, item } = this.props
+const cat = this.cat
+const filter_listings = listings.filter((listing) => {
+  if (cat[title] !== 'mana') {
+     return listing[cat[title]].toUpperCase() == item
+  } else {
+     if (item === '7+') {
+        return listing[cat[title]] >= 7
+     } else {
+        return listing[cat[title]] == item
+     }
+  }
+})
+
+let cat_title
+let item_title
+if (cat[title] === 'mana') {
+  cat_title = 'mana cost'
+  item_title = 'Mana ' + item.toString();
+} else {
+  cat_title = cat[title]
+  item_title = item[0].toUpperCase() + item.slice(1).toLowerCase()
+}
+```
+### User Edit & Profile Page
+
+Logged in users can view all of their listings and the number of listings that they have under their user profile page. They are also able to edit their profile through the settings tab via their user profile page.
