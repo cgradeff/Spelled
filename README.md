@@ -42,7 +42,7 @@ const ModalReducer = (state = startState, action) => {
 
 When logged in users can create a listing, they have the ability to upload a photo to their listing. Logged in users also have the ability to edit and delete their listings.
 
-![Modals Image](./Readme-images/modal.png)
+![Listing Image](./Readme-images/edit_list.png)
 
 ```js
 handleFile(e) {
