@@ -8,7 +8,7 @@ class User extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      edit: false
+      edit: (this.props.page === 'settings' ? true : false)
     }
     this.handleMyItems = this.handleMyItems.bind(this)
     this.handleSettings = this.handleSettings.bind(this)

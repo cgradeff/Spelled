@@ -38,7 +38,7 @@ const App = () => (
         <Route exact path='/listings/:listingId' component={ListingShowContainer} ></Route>
         <ProtectedRoute exact path="/sell" component={SellContainer} />
         <ProtectedRoute exact path="/listings/:listingId/edit" component={EditListingContainer} />
-        <ProtectedRoute exact path='/users/:userId' component={UserContainer} ></ProtectedRoute>
+        <ProtectedRoute exact path='/users/:userId/:page' component={UserContainer} ></ProtectedRoute>
         <Redirect to="/" />
       </Switch>
     </div>

@@ -33,7 +33,7 @@ class UserSettings extends React.Component {
           onMouseLeave={this.onHover}
         >
           <div id="user-icon-cont">
-            <Link to={`/users/${this.props.currentUser.id}`}>
+            <Link to={`/users/${this.props.currentUser.id}/${'listings'}`}>
               <FontAwesomeIcon icon={['fas', 'user-circle']} id="icon" />
             </Link>
           </div>
@@ -43,13 +43,13 @@ class UserSettings extends React.Component {
               onClick={(e) => e.stopPropagation()}
             >
               <Link
-                to={`/users/${this.props.currentUser.id}`}
+                to={`/users/${this.props.currentUser.id}/${'listings'}`}
                 className="linked"
               >
                 <li className="menu-item">MY ITEMS</li>
               </Link>
               <Link
-                to={`/users/${this.props.currentUser.id}/settings`}
+                to={`/users/${this.props.currentUser.id}/${'settings'}`}
                 className="linked"
               >
                 <li className="menu-item">SETTINGS</li>
