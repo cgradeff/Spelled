@@ -35,7 +35,6 @@ class Sell extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        console.log(this.props.currentUser)
         const formData = new FormData
         formData.append('listing[title]', this.state.title);
         formData.append('listing[mana]', this.state.mana);
