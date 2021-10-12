@@ -8,7 +8,7 @@ class CatPage extends React.Component {
       TYPES: 'types',
       RARITY: 'rarity',
       'MANA COST': 'mana',
-      COLOR: 'color',
+      COLOR: 'colors',
     }
   }
 
@@ -21,14 +21,16 @@ class CatPage extends React.Component {
     const { listings, deleteListing, title, item } = this.props
     const cat = this.cat
     const filter_listings = listings.filter((listing) => {
-      if (cat[title] !== 'mana') {
-        return listing[cat[title]].toUpperCase() == item
-      } else {
+      if (cat[title] === 'mana') {
         if (item === '7+') {
           return listing[cat[title]] >= 7
         } else {
           return listing[cat[title]] == item
         }
+      } else if (cat[title] === 'colors' || cat[title] === 'types') {
+        return listing[cat[title]].toUpperCase().includes(item)
+      } else {
+        return listing[cat[title]].toUpperCase() == item
       }
     })
 
@@ -48,7 +50,7 @@ class CatPage extends React.Component {
         {filter_listings.length === 0 ? (
           <div className="no-listings">
             <h3>
-              There are no availible listings with a {cat_title} of {item}
+              There are no availible listings with a {cat_title} of {item.toLowerCase()}
             </h3>
           </div>
         ) : (

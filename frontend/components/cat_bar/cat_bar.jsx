@@ -9,13 +9,13 @@ class CatBar extends React.Component {
       {
         title: 'TYPES',
         items: [
-          'LANDS',
-          'CREATURES',
-          'PLANESWALKERS',
-          'ENCHANTMENTS',
-          'ARTIFACTS',
-          'INSTANTS',
-          'SORCERIES',
+          'LAND',
+          'CREATURE',
+          'PLANESWALKER',
+          'ENCHANTMENT',
+          'ARTIFACT',
+          'INSTANT',
+          'SORCERY',
         ],
       },
       {
@@ -25,7 +25,7 @@ class CatBar extends React.Component {
       { title: 'MANA COST', items: ['X', 0, 1, 2, 3, 4, 5, 6, '7+'] },
       {
         title: 'COLOR',
-        items: ['RED', 'BLACK', 'BLUE', 'GREEN', 'WHITE', 'MULTI'],
+        items: ['RED', 'BLACK', 'BLUE', 'GREEN', 'WHITE', 'COLORLESS'],
       }, 
     ]
   }

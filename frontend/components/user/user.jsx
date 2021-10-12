@@ -12,6 +12,7 @@ class User extends React.Component {
     }
     this.handleMyItems = this.handleMyItems.bind(this)
     this.handleSettings = this.handleSettings.bind(this)
+    this.props.fetchUser(this.props.user.id)
   }
 
   componentDidMount() {

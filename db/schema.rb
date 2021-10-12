@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_29_010033) do
+ActiveRecord::Schema.define(version: 2021_10_12_152250) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -75,11 +75,15 @@ ActiveRecord::Schema.define(version: 2021_09_29_010033) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "offer"
     t.string "sold"
+    t.string "colors"
+    t.string "types"
+    t.index ["colors"], name: "index_listings_on_colors"
     t.index ["condition"], name: "index_listings_on_condition"
     t.index ["mana"], name: "index_listings_on_mana"
     t.index ["price"], name: "index_listings_on_price"
     t.index ["rarity"], name: "index_listings_on_rarity"
     t.index ["title"], name: "index_listings_on_title"
+    t.index ["types"], name: "index_listings_on_types"
   end
 
   create_table "listings_types", id: false, force: :cascade do |t|

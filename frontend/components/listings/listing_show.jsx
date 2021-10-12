@@ -30,7 +30,7 @@ class ListingShow extends React.Component {
   render() {
     const { listing } = this.props
 
-    if (listing == undefined || listing.names == undefined)  {
+    if (listing == undefined || listing.title == undefined)  {
       return null
     }
   
@@ -45,21 +45,23 @@ class ListingShow extends React.Component {
 
           <div className='listing-show-list'>
             <div>Types:</div>
-              {listing.names.map (val => 
+              {/* {listing.names.map (val => 
                 <div key={val.name}>
                   {val.name}
                 </div>)
-              }
+              } */}
+              {listing.types}
           </div>
           <br />
 
           <div className='listing-show-list'>
             <div>Colors:</div> 
-              {listing.colors.map (val => 
+              {/* {listing.colors.map (val => 
                 <div key={val.color}>
                   {val.color}
                 </div>)
-              }
+              } */}
+              {listing.colors}
           </div>
           <br />
 

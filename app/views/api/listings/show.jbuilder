@@ -1,14 +1,14 @@
-json.extract! @listing, :id, :title, :body, :price, :offer, :sold, :condition, :rarity, :mana, :author_id 
+json.extract! @listing, :id, :title, :body, :price, :offer, :sold, :condition, :rarity, :mana, :colors, :types, :author_id 
 # @listing.types.each do |type|
 #     json.extract! type, :name
 # end
-json.names do 
-    json.array! @listing.types, :name
-end
+# json.names do 
+#     json.array! @listing.types, :name
+# end
 
-json.colors do 
-    json.array! @listing.colors, :color
-end
+# json.colors do 
+#     json.array! @listing.colors, :color
+# end
 
 json.comments do 
     json.array! @listing.comments, :body

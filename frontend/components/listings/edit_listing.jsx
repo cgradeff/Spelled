@@ -20,7 +20,7 @@ class EditListing extends React.Component {
     }
 
     navToShow() {
-        const url = `/users/${this.props.listing.author_id}`
+        const url = `/users/${this.props.listing.author_id}/${'listings'}`
         this.props.history.push(url);
     }
 
@@ -41,11 +41,11 @@ class EditListing extends React.Component {
                     <br />
                     <div className='sell-title'>RARITY</div> 
                     <select type="rarity" value={this.state.rarity} onChange={this.update('rarity')}>
-                        <option value="Basic-Land">Basic Land</option>
+                        <option value="Basic Land">Basic Land</option>
                         <option value="Common">Common</option>
                         <option value="Uncommon">Uncommon</option>
                         <option value="Rare">Rare</option>
-                        <option value="Mythic-Rare">Mythic Rare</option>
+                        <option value="Mythic Rare">Mythic Rare</option>
                     </select>
                     <br />
                     <br />

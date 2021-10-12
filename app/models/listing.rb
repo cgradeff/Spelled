@@ -9,13 +9,13 @@ class Listing < ApplicationRecord
     class_name: :User
   
   # for types
-  has_many :list_types,
-    primary_key: :id,
-    foreign_key: :listing_id,
-    class_name: :ListingsType
+  # has_many :list_types,
+  #   primary_key: :id,
+  #   foreign_key: :listing_id,
+  #   class_name: :ListingsType
 
-  has_many :types,
-    through: :list_types 
+  # has_many :types,
+  #   through: :list_types 
   
   # for comments
   has_many :comments,
@@ -24,13 +24,13 @@ class Listing < ApplicationRecord
     class_name: :Comment
 
   # for colors 
-  has_many :list_colors, 
-    primary_key: :id,
-    foreign_key: :listing_id,
-    class_name: :ColorsListing
+  # has_many :list_colors, 
+  #   primary_key: :id,
+  #   foreign_key: :listing_id,
+  #   class_name: :ColorsListing
 
-  has_many :colors,
-    through: :list_colors
+  # has_many :colors,
+  #   through: :list_colors
     
 # Active Storage Association
   has_one_attached :photo
