@@ -96,3 +96,21 @@
 .sell-form button:hover {
     background-color: rgb(44, 44, 44);
 }
+
+.sell-content label {
+    font-size: 14px;
+    display: flex;
+    height: 3em;
+    align-items: center;
+}
+.sell-content label div {
+    margin-top: -.7em;
+    text-align: center;
+}
+
+.sell-content label input {
+    width: 5em;
+    height: 1.5em;
+    font-size: 12px;
+}
+

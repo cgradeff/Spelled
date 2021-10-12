@@ -122,6 +122,7 @@ class Sell extends React.Component {
             <br />
             <br />
             <div className="sell-title">COLORS</div>
+            <br />
             <label>
               <input
                 type="radio"
@@ -129,7 +130,7 @@ class Sell extends React.Component {
                 // checked={this.state.selectedOption === 'Red'}
                 onChange={this.updateColor()}
               />
-              Red
+              <div>Red</div>
             </label>
             <label>
               <input
@@ -138,7 +139,7 @@ class Sell extends React.Component {
                 // checked={this.state.selectedOption === 'Red'}
                 onChange={this.updateColor()}
               />
-              Blue
+              <div>Blue</div>
             </label>
             <label>
               <input
@@ -147,7 +148,7 @@ class Sell extends React.Component {
                 // checked={this.state.selectedOption === 'Red'}
                 onChange={this.updateColor()}
               />
-              Green
+              <div>Green</div>
             </label>
             <label>
               <input
@@ -156,7 +157,7 @@ class Sell extends React.Component {
                 // checked={this.state.selectedOption === 'Red'}
                 onChange={this.updateColor()}
               />
-              Black
+              <div>Black</div>
             </label>
             <label>
               <input
@@ -165,7 +166,7 @@ class Sell extends React.Component {
                 // checked={this.state.selectedOption === 'Red'}
                 onChange={this.updateColor()}
               />
-              White
+              <div>White</div>
             </label>
             <label>
               <input
@@ -174,11 +175,12 @@ class Sell extends React.Component {
                 // checked={this.state.selectedOption === 'Red'}
                 onChange={this.updateColor()}
               />
-              Colorless
+              <div>Colorless</div>
             </label>
             <br />
             <br />
             <div className="sell-title">TYPES</div>
+            <br />
             <label>
               <input
                 type="radio"
@@ -186,7 +188,7 @@ class Sell extends React.Component {
                 // checked={this.state.selectedOption === 'Red'}
                 onChange={this.updateType()}
               />
-              Land
+              <div>Land</div>
             </label>
             <label>
               <input
@@ -195,7 +197,7 @@ class Sell extends React.Component {
                 // checked={this.state.selectedOption === 'Red'}
                 onChange={this.updateType()}
               />
-              Artifact
+              <div>Artifact</div>
             </label>
             <label>
               <input
@@ -204,7 +206,7 @@ class Sell extends React.Component {
                 // checked={this.state.selectedOption === 'Red'}
                 onChange={this.updateType()}
               />
-              Creature
+              <div>Creature</div>
             </label>
             <label>
               <input
@@ -213,7 +215,7 @@ class Sell extends React.Component {
                 // checked={this.state.selectedOption === 'Red'}
                 onChange={this.updateType()}
               />
-              Planeswalker
+              <div>Planeswalker</div>
             </label>
             <label>
               <input
@@ -222,7 +224,7 @@ class Sell extends React.Component {
                 // checked={this.state.selectedOption === 'Red'}
                 onChange={this.updateType()}
               />
-              Sorcery
+              <div>Sorcery</div>
             </label>
             <label>
               <input
@@ -231,7 +233,7 @@ class Sell extends React.Component {
                 // checked={this.state.selectedOption === 'Red'}
                 onChange={this.updateType()}
               />
-              Enchantment
+              <div>Enchantment</div>
             </label>
             <label>
               <input
@@ -240,7 +242,7 @@ class Sell extends React.Component {
                 // checked={this.state.selectedOption === 'Red'}
                 onChange={this.updateType()}
               />
-              Instant
+              <div>Instant</div>
             </label>
             <br />
             <br />
