@@ -239,7 +239,139 @@ file10 = URI.open("https://spelled-seeds.s3.amazonaws.com/crackling-drake.png")
 list10.photo.attach(io: file10, filename: "crackling-drake.png")
 
 
+list11 = Listing.create!(
+    title: 'Black Lotus',
+    body: "super rare!",
+    price: 200,
+    offer: 'true',
+    sold: 'false',
+    condition: 'New',
+    rarity: 'Mythic Rare',
+    mana: 0,
+    colors: 'Colorless ',
+    types: 'Artifact ',
+    author_id: user3.id
+)
+
+file11 = URI.open("https://spelled-seeds.s3.amazonaws.com/black-lotus.png")
+list11.photo.attach(io: file11, filename: "black-lotus.png")
+
+list12 = Listing.create!(
+    title: 'Nekusar, the Mindrazer',
+    body: "don't know if I really want to sell him, he's in great condition",
+    price: 100,
+    offer: 'false',
+    sold: 'false',
+    condition: 'New',
+    rarity: 'Mythic Rare',
+    mana: 5,
+    colors: 'Red Blue Black ',
+    types: 'Creature ',
+    author_id: user2.id
+)
+
+file12 = URI.open("https://spelled-seeds.s3.amazonaws.com/c13-201-nekusar-the-mindrazer.png")
+list12.photo.attach(io: file12, filename: "c13-201-nekusar-the-mindrazer.png")
 
 
+list13 = Listing.create!(
+    title: 'Rankle, Master of Pranks',
+    body: "prettttyy mean card",
+    price: 50,
+    offer: 'false',
+    sold: 'false',
+    condition: 'New',
+    rarity: 'Mythic Rare',
+    mana: 4,
+    colors: 'Black ',
+    types: 'Creature ',
+    author_id: user1.id
+)
 
+file13 = URI.open("https://spelled-seeds.s3.amazonaws.com/eld-101-rankle-master-of-pranks.png")
+list13.photo.attach(io: file13, filename: "eld-101-rankle-master-of-pranks.png")
 
+list14 = Listing.create!(
+    title: 'Prismatic Vista',
+    body: "for sure the best fetch land",
+    price: 199,
+    offer: 'false',
+    sold: 'false',
+    condition: 'Used',
+    rarity: 'Rare',
+    mana: 0,
+    colors: 'Black ',
+    types: 'Land ',
+    author_id: user3.id
+)
+
+file14 = URI.open("https://spelled-seeds.s3.amazonaws.com/prsmatic-vista.png")
+list14.photo.attach(io: file14, filename: "prsmatic-vista.png")
+
+list15 = Listing.create!(
+    title: 'Sol Ring',
+    body: "needed card for any commander deck",
+    price: 99,
+    offer: 'false',
+    sold: 'false',
+    condition: 'Like New',
+    rarity: 'Uncommon',
+    mana: 1,
+    colors: 'Colorless ',
+    types: 'Artifact ',
+    author_id: user2.id
+)
+
+file15 = URI.open("https://spelled-seeds.s3.amazonaws.com/sol-ring.png")
+list15.photo.attach(io: file15, filename: "sol-ring.png")
+
+list16 = Listing.create!(
+    title: 'Swamp',
+    body: "eh have too many of these",
+    price: 23,
+    offer: 'true',
+    sold: 'false',
+    condition: 'Like New',
+    rarity: 'Basic Land',
+    mana: 0,
+    colors: 'Black ',
+    types: 'Land ',
+    author_id: user2.id
+)
+
+file16 = URI.open("https://spelled-seeds.s3.amazonaws.com/swamp.png")
+list16.photo.attach(io: file16, filename: "swamp.png")
+
+list17 = Listing.create!(
+    title: 'Arid Mesa',
+    body: "sick fetch land",
+    price: 122,
+    offer: 'true',
+    sold: 'false',
+    condition: 'New',
+    rarity: 'Rare',
+    mana: 0,
+    colors: 'Red White ',
+    types: 'Land ',
+    author_id: user1.id
+)
+
+file17 = URI.open("https://spelled-seeds.s3.amazonaws.com/arid-mesa.png")
+list17.photo.attach(io: file17, filename: "arid-mesa.png")
+
+list18 = Listing.create!(
+    title: 'Wheel of Fortune',
+    body: "perfect in a wheel deck",
+    price: 80,
+    offer: 'true',
+    sold: 'false',
+    condition: 'New',
+    rarity: 'Mythic Rare',
+    mana: 3,
+    colors: 'Red ',
+    types: 'Sorcery ',
+    author_id: user2.id
+)
+
+file18 = URI.open("https://spelled-seeds.s3.amazonaws.com/wheel-of-fortune.png")
+list18.photo.attach(io: file18, filename: "wheel-of-fortune.png")
