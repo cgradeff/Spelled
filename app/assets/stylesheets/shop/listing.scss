@@ -191,6 +191,7 @@
 .comments form button:hover {
     border-color: black;
     background-color: #f8f8f8;
+    cursor: pointer;
 }
 
 // comment list
@@ -233,5 +234,8 @@
     font-weight: 600;
     font-size: 12px;
     background-color: transparent;
+    &:hover {
+        cursor: pointer;
+    }
 }
 
