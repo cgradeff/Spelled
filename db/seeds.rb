@@ -106,7 +106,7 @@ comment4 = Comment.create!(
 
 list3 = Listing.create!(
     title: 'Tuvasa the Sunlit',
-    body: 'she lovessss enchantments',
+    body: 'commander that lovessss enchantments',
     price: 100,
     offer: 'false',
     sold: 'false',
@@ -301,7 +301,7 @@ comment10 = Comment.create!(
 
 list12 = Listing.create!(
     title: 'Nekusar, the Mindrazer',
-    body: "don't know if I really want to sell him, he's in great condition",
+    body: "don't know if I really want to sell him, he's in great condition and my fav commander",
     price: 100,
     offer: 'false',
     sold: 'false',
@@ -353,7 +353,7 @@ list14.photo.attach(io: file14, filename: "prsmatic-vista.png")
 
 list15 = Listing.create!(
     title: 'Sol Ring',
-    body: "needed card for any commander deck",
+    body: "needed card for any deck",
     price: 99,
     offer: 'false',
     sold: 'false',

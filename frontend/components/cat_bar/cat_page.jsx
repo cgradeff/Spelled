@@ -9,6 +9,7 @@ class CatPage extends React.Component {
       RARITY: 'rarity',
       'MANA COST': 'mana',
       COLOR: 'colors',
+      BODY: 'body'
     }
   }
 
@@ -27,7 +28,7 @@ class CatPage extends React.Component {
         } else {
           return listing[cat[title]] == item
         }
-      } else if (cat[title] === 'colors' || cat[title] === 'types') {
+      } else if (cat[title] === 'colors' || cat[title] === 'types' || cat[title] === 'body') {
         return listing[cat[title]].toUpperCase().includes(item)
       } else {
         return listing[cat[title]].toUpperCase() == item
