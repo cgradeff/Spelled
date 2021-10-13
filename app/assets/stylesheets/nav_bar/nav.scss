@@ -113,12 +113,14 @@
 #signup:hover {
   background-color: rgb(53, 53, 53);
   border-color: rgb(53, 53, 53);
+  cursor: pointer;
 }
 
 #login:hover {
   background-color: rgb(251, 251, 251);
   color: blue;
   border-color: black;
+  cursor: pointer;
 }
 
 // sell and shop links
@@ -205,6 +207,10 @@
   border-radius: 4px;
   font-size: 14px;
   font-weight: 550;
+}
+
+.search-button:hover {
+  cursor: pointer;
 }
 
 
