@@ -26,6 +26,9 @@
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 300;
     font-size: 14px;
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 .sell-form input:focus, .sell-form select:focus,  .sell-form textarea:focus{
@@ -47,7 +50,8 @@
 .sell-form select {
     margin-bottom: 30px;
     margin-top: 20px;
-    width: 375px;
+    padding-left: 1em;
+    width: 388px;
     height: 40px;
     border: 1px solid rgb(221, 221, 221);
     border-radius: 2px;
@@ -56,6 +60,9 @@
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 300;
     font-size: 14px;
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 .sell-form textarea {
@@ -72,6 +79,9 @@
     font-size: 14px;
     padding-top: 1em;
     padding-left: 1em;
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 .sell-preview img{
@@ -95,6 +105,7 @@
 
 .sell-form button:hover {
     background-color: rgb(44, 44, 44);
+    cursor: pointer;
 }
 
 .sell-content label {
@@ -112,5 +123,8 @@
     width: 5em;
     height: 1.5em;
     font-size: 12px;
+    &:hover {
+        cursor: pointer;
+    }
 }
 
