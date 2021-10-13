@@ -11,6 +11,13 @@ class SessionForm extends React.Component {
     this.handleDemoUser = this.handleDemoUser.bind(this)
   }
 
+  componentDidUpdate(prevProps) {
+    if (prevProps.currentUser !== this.props.currentUser) {
+      this.props.closeModal();
+      this.props.fetchUser(this.props.currentUser)
+    }
+  }
+
   update(field) {
     return (e) =>
       this.setState({
@@ -22,10 +29,20 @@ class SessionForm extends React.Component {
     e.preventDefault()
     const user = Object.assign({}, this.state)
     this.props.processForm(user).then(this.props.closeModal)
+    this.setState({
+      email: '',
+      password: '',
+    })
   }
 
   handleDemoUser(e) {
-    this.setState({ email: 'Demo@gmail.com', password: 'ILoveMagic!' })
+    e.preventDefault()
+    this.props.processForm({ email: 'Demo@gmail.com', password: 'ILoveMagic!' })
+    // .then(this.props.closeModal())
+    this.setState({
+      email: '',
+      password: '',
+    })
   }
 
   render() {
