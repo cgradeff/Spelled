@@ -47,6 +47,9 @@ label {
   background-color: rgb(0, 0, 0);
   font-weight: 500;
   color: #ffffff;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .session-form-container input[type='text'],
@@ -73,6 +76,7 @@ label {
 .session-form-container button:hover,
 .session-form-container input[type='submit']:hover {
   background-color: #2e2e2e;
+  cursor: pointer;
 }
 
 .modal-bottom-button {
