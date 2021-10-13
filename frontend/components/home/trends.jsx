@@ -25,7 +25,7 @@ class Trends extends React.Component {
           </div>
         </div>
         <br />
-        <p className="trend-titles">Shop by Rarity</p>
+        <p className="trend-titles">Shop by Color</p>
         <div className='type-trends-container'>
           <div className="type-trends">
             <div className="type-box">

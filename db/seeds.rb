@@ -90,6 +90,18 @@ list2 = Listing.create!(
 file2 = URI.open("https://spelled-seeds.s3.amazonaws.com/belbe.png")
 list2.photo.attach(io: file2, filename: "belbe.png")
 
+comment3 = Comment.create!(
+    author_id: user1.id,
+    list_id: list2.id,
+    body: 'I have her!'
+)
+
+comment4 = Comment.create!(
+    author_id: user3.id,
+    list_id: list2.id,
+    body: 'love a belbe deck'
+)
+
 
 
 list3 = Listing.create!(
@@ -109,7 +121,11 @@ list3 = Listing.create!(
 file3 = URI.open("https://spelled-seeds.s3.amazonaws.com/tuvasa-the-sunlit.png")
 list3.photo.attach(io: file3, filename: "tuvasa-the-sunlit.png")
 
-
+comment5 = Comment.create!(
+    author_id: demo.id,
+    list_id: list3.id,
+    body: 'shes a mean commander to play against'
+)
 
 list4 = Listing.create!(
     title: 'Snow-Covered Plains',
@@ -183,7 +199,11 @@ list7 = Listing.create!(
 file7 = URI.open("https://spelled-seeds.s3.amazonaws.com/frost-bite.png")
 list7.photo.attach(io: file7, filename: "frost-bite.png")
 
-
+comment6 = Comment.create!(
+    author_id: user1.id,
+    list_id: list7.id,
+    body: 'love this for a red snow deck'
+)
 
 list8 = Listing.create!(
     title: 'Rise from the Grave',
@@ -238,6 +258,11 @@ list10 = Listing.create!(
 file10 = URI.open("https://spelled-seeds.s3.amazonaws.com/crackling-drake.png")
 list10.photo.attach(io: file10, filename: "crackling-drake.png")
 
+comment7 = Comment.create!(
+    author_id: user3.id,
+    list_id: list10.id,
+    body: "eh i don't really like this card but to each their own"
+)
 
 list11 = Listing.create!(
     title: 'Black Lotus',
@@ -255,6 +280,24 @@ list11 = Listing.create!(
 
 file11 = URI.open("https://spelled-seeds.s3.amazonaws.com/black-lotus.png")
 list11.photo.attach(io: file11, filename: "black-lotus.png")
+
+comment8 = Comment.create!(
+    author_id: user2.id,
+    list_id: list11.id,
+    body: "whoah! is this for real?"
+)
+
+comment9 = Comment.create!(
+    author_id: user1.id,
+    list_id: list11.id,
+    body: "i've been looking for one of these for forever"
+)
+
+comment10 = Comment.create!(
+    author_id: user2.id,
+    list_id: list11.id,
+    body: "right?! same here"
+)
 
 list12 = Listing.create!(
     title: 'Nekusar, the Mindrazer',
@@ -322,6 +365,12 @@ list15 = Listing.create!(
     author_id: user2.id
 )
 
+comment11 = Comment.create!(
+    author_id: demo.id,
+    list_id: list15.id,
+    body: "Solid card"
+)
+
 file15 = URI.open("https://spelled-seeds.s3.amazonaws.com/sol-ring.png")
 list15.photo.attach(io: file15, filename: "sol-ring.png")
 
@@ -356,6 +405,12 @@ list17 = Listing.create!(
     author_id: user1.id
 )
 
+comment12 = Comment.create!(
+    author_id: user3.id,
+    list_id: list17.id,
+    body: "I would very much love to buy this card"
+)
+
 file17 = URI.open("https://spelled-seeds.s3.amazonaws.com/arid-mesa.png")
 list17.photo.attach(io: file17, filename: "arid-mesa.png")
 
@@ -375,3 +430,60 @@ list18 = Listing.create!(
 
 file18 = URI.open("https://spelled-seeds.s3.amazonaws.com/wheel-of-fortune.png")
 list18.photo.attach(io: file18, filename: "wheel-of-fortune.png")
+
+list19 = Listing.create!(
+    title: 'Armadillo Cloak',
+    body: "nice aura",
+    price: 23,
+    offer: 'true',
+    sold: 'false',
+    condition: 'New',
+    rarity: 'Uncommon',
+    mana: 3,
+    colors: 'Green White ',
+    types: 'Enchantment ',
+    author_id: demo.id
+)
+
+file19 = URI.open("https://spelled-seeds.s3.amazonaws.com/cloak.png")
+list19.photo.attach(io: file19, filename: "cloak.png")
+
+list20 = Listing.create!(
+    title: 'Broodmate Dragon',
+    body: "pretty sweet don't know if I want to sell",
+    price: 40,
+    offer: 'true',
+    sold: 'false',
+    condition: 'New',
+    rarity: 'Rare',
+    mana: 6,
+    colors: 'Red Green Black ',
+    types: 'Creature ',
+    author_id: user2.id
+)
+
+file20 = URI.open("https://spelled-seeds.s3.amazonaws.com/mm3-153-broodmate-dragon.png")
+list20.photo.attach(io: file20, filename: "mm3-153-broodmate-dragon.png")
+
+list21 = Listing.create!(
+    title: 'Drana, Kalastria Bloodchief',
+    body: "my all time favorite card for sure",
+    price: 999,
+    offer: 'true',
+    sold: 'false',
+    condition: 'New',
+    rarity: 'Rare',
+    mana: 5,
+    colors: 'Black ',
+    types: 'Creature ',
+    author_id: user2.id
+)
+
+file21 = URI.open("https://spelled-seeds.s3.amazonaws.com/drana.png")
+list21.photo.attach(io: file21, filename: "drana.png")
+
+comment13 = Comment.create!(
+    author_id: user1.id,
+    list_id: list21.id,
+    body: "*heart eyes emoji*"
+)
