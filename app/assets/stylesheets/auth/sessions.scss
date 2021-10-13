@@ -77,7 +77,6 @@ label {
 
 .modal-bottom-button {
   background-color: white;
-  
 }
 
 .modal-bottom-text {
@@ -98,6 +97,10 @@ label {
   width: fit-content;
   text-decoration: underline;
   height: 48px;
+}
+
+#switch:hover {
+  cursor: pointer;
 }
 
 
