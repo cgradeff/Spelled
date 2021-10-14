@@ -15,6 +15,14 @@ class User extends React.Component {
     this.props.fetchUser(this.props.user.id)
   }
 
+  componentDidUpdate(prevProps) {
+    if (prevProps.page !== this.props.page) {
+      this.setState({
+        edit: !this.state.edit
+      })
+    }
+  }
+
   componentDidMount() {
     this.props.fetchUser(this.props.user.id)
   }
