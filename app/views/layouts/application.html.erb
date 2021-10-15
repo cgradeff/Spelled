@@ -11,6 +11,17 @@
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
 
+    <meta property="og:title" content="Spelled" />
+     <meta property='og:image' content="<%= image_url('project-pic.png') %>"/>
+     <meta property="og:description"
+       content="A clone of the luxury fashion ecommerce website Grailed, where instead of selling menswear, users can sell and
+‘purchase’ Magic the Gathering cards."
+     />
+     <meta property="og:url"
+       content="https://spelled-aa.herokuapp.com/#/"
+     />
+
+
     <script>
       window.logoUrl = '<%= image_url('logo.png') %>'
       window.placeholderUrl = '<%= image_url('placeholder.jpg') %>'
