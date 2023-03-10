@@ -101,7 +101,3 @@ Logged in users can view all of their listings and the number of listings that t
 ![Edit User Image](./Readme-images/edit_user.png)
 
 ![Prof Image](./Readme-images/user_prof.png)
-
-### Coming Soon!
-
-Users will be able to 'purchase' listings, submit offers and message sellers. They will also be able to view their favorites list under user profile and add and delete listings from their favorites.
