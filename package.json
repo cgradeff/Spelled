@@ -7,10 +7,6 @@
     "lib": "lib",
     "test": "test"
   },
-  "engines": {
-    "node": "15.7.0",
-    "npm": "7.20.1"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "webpack": "webpack --watch --mode=development",
